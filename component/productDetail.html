@@ -1,5 +1,10 @@
 <script>
-  $(document).ready(function(){});
+  $(document).ready(function(){
+    $('div.payment_btn').on('click',function(){
+      console.log('d');
+      window.location.href = "./checkout.html";
+    });
+  });
 </script>
 <body>
   <div id='section_productDetail'>
@@ -58,7 +63,7 @@
 
           <div class='payment_btn_wrapper info_sect'>
             <div class='payment_btn'>單獨購買 <i class="fas fa-gift"></i></div>
-            <div class='payment_btn'>團購 <i class="fas fa-people-carry"></i></div>
+            <div class='payment_btn' id='payment_btn_g'>團購 <i class="fas fa-people-carry"></i></div>
           </div>
 
           <div class='groupCheer_wrapper info_sect'>
