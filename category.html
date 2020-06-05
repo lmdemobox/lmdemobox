@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- Awesome font -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+    <!-- O W N -->
+    <link rel='stylesheet' href='style/style_category.css'>
+    <script src='script/script_category.js'></script>
+    <link href="asset/noUiSlider/distribute/nouislider.css" rel="stylesheet">
+    <script src="asset/noUiSlider/distribute/nouislider.js"></script>
+    <title></title>
+    <script></script>
+  </head>
+  <body>
+    <div id='sticky_meun'>
+      <div id='position_nav' class=''></div>
+      <div id='position_cat' class=''></div>
+    </div>
+    <div id='position_content'>
+      <div id='position_adBanner'></div>
+      <div id='position_productShow' class='section_block'>
+        <div class='wrapper'>
+          <div class='section_option'>
+            <div class='option_cat'>
+              <div class='title_cat'>分類<i class='fas fa-dolly'></i></div>
+              <div class='main_cat active'>食品及飲料</div>
+              <div class='selection_area'>
+                <div class='sub_cat_title active' id='sc_1'>酒精飲品</div>
+                <div class='sc_list sc_1_list active'>
+                  <div class='sc_1_item sc_item'>伏特加</div>
+                  <div class='sc_1_item sc_item'>威士忌</div>
+                  <div class='sc_1_item sc_item'>Gin</div>
+                  <div class='sc_1_item sc_item'>啤酒</div>
+                  <div class='sc_1_item sc_item'>紅酒</div>
+                  <div class='sc_1_item sc_item'>白酒</div>
+                  <div class='sc_1_item sc_item'>氣泡酒</div>
+                  <div class='sc_1_item sc_item'>香檳</div>
+                  <div class='sc_1_item sc_item'>蘭姆酒</div>
+                  <div class='sc_1_item sc_item'>龍舌蘭酒</div>
+                  <div class='sc_1_item sc_item'>干邑</div>
+                  <div class='sc_1_item sc_item'>利口酒</div>
+                  <div class='sc_1_item sc_item'>開胃酒</div>
+                  <div class='sc_1_item sc_item'>朗姆酒</div>
+                </div>
+                <div class='sub_cat_title' id='sc_2'>零食</div>
+                <div class='sc_list sc_2_list'>
+                  <div class='sc_2_item sc_item'>有機零食</div>
+                  <div class='sc_2_item sc_item'>薯片爆谷</div>
+                  <div class='sc_2_item sc_item'>糖果</div>
+                  <div class='sc_2_item sc_item'>朱古力</div>
+                </div>
+                <div class='sub_cat_title' id='sc_3'>Featured Brands</div>
+                <div class='sc_list sc_3_list'>
+                  <div class='sc_3_item sc_item'>Absolut</div>
+                  <div class='sc_3_item sc_item'>Macallan</div>
+                  <div class='sc_3_item sc_item'>Bombay</div>
+                </div>
+              </div>
+            </div>
+            <div class='option_brand'>
+              <div class='brand_title'>品牌 <i class="fas fa-tags"></i></div>
+              <div class='checkArea'>
+                <div class='brand_item'>一號牌</div>
+                <div class='brand_item'>太陽牌</div>
+                <div class='brand_item'>銀行牌</div>
+                <div class='brand_item'>海洋牌</div>
+              </div>
+            </div>
+            <hr/>
+            <div class='option_price'>
+              <div class='price_title'>價錢</div>
+              <div class='price_input_wrapper'>
+                <input id='price_range_lower' value='0'/> 至 <input id='price_range_higher' value='1000'/>
+              </div>
+              <div id='price_slider'></div>
+            </div>
+            <hr/>
+            <div class='cat_rate'>
+              <div class='subTitle'>評價 <i class="fas fa-star-half-alt"></i></div>
+              <div class='stars'>
+                <i class="fas fa-star rate_star" id='st1'></i>
+                <i class="fas fa-star rate_star" id='st2'></i>
+                <i class="fas fa-star rate_star" id='st3'></i>
+                <i class="fas fa-star rate_star" id='st4'></i>
+                <i class="fas fa-star rate_star" id='st5'></i>
+              </div>
+            </div>
+          </div>
+          <!--- --->         <!--- --->
+          <!--- --->         <!--- --->
+          <!--- --->         <!--- --->
+          <div class='section_product'>
+            <div class='wrapper'>
+              <a href='./product.html'>
+                <div class='block_item'>
+                  <div class='item_image'><i class="fas fa-heart"></i></div>
+                  <div class='item_info'>
+                    <div class='item_bn'><span class='item_brand'>廚房牌</span> - <span class='item_name'>北海道胡椒粉 橙味</span></div>
+                    <div class='item_stat'>
+                      <div class='item_rate'>
+                        <i class="fas fa-star rate_star" id='st1'></i>
+                        <i class="fas fa-star rate_star" id='st2'></i>
+                        <i class="fas fa-star rate_star" id='st3'></i>
+                        <i class="fas fa-star rate_star" id='st4'></i>
+                        <i class="fas fa-star rate_star" id='st5'></i>  <div style='margin-left:4px;'>(0)</div>
+                      </div>
+                      <div class='item_sold'>已售出 484</div>
+                    </div>
+                    <div class='item_price'>
+                      <div class='item_price_current'>HKD $55.00</div>
+                      <div class='item_price_old'>$71.00</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class='block_item'>
+                <div class='item_image'><i class="fas fa-heart"></i></div>
+                <div class='item_info'>
+                  <div class='item_bn'><span class='item_brand'>廚房牌</span> - <span class='item_name'>北海道胡椒粉 橙味</span></div>
+                  <div class='item_stat'>
+                    <div class='item_rate'>
+                      <i class="fas fa-star rate_star" id='st1'></i>
+                      <i class="fas fa-star rate_star" id='st2'></i>
+                      <i class="fas fa-star rate_star" id='st3'></i>
+                      <i class="fas fa-star rate_star" id='st4'></i>
+                      <i class="fas fa-star rate_star" id='st5'></i>  <div style='margin-left:4px;'>(0)</div>
+                    </div>
+                    <div class='item_sold'>已售出 484</div>
+                  </div>
+                  <div class='item_price'>
+                    <div class='item_price_current'>HKD $55.00</div>
+                    <div class='item_price_old'>$71.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class='block_item'>
+                <div class='item_image'><i class="fas fa-heart"></i></div>
+                <div class='item_info'>
+                  <div class='item_bn'><span class='item_brand'>廚房牌</span> - <span class='item_name'>北海道胡椒粉 橙味</span></div>
+                  <div class='item_stat'>
+                    <div class='item_rate'>
+                      <i class="fas fa-star rate_star" id='st1'></i>
+                      <i class="fas fa-star rate_star" id='st2'></i>
+                      <i class="fas fa-star rate_star" id='st3'></i>
+                      <i class="fas fa-star rate_star" id='st4'></i>
+                      <i class="fas fa-star rate_star" id='st5'></i>  <div style='margin-left:4px;'>(0)</div>
+                    </div>
+                    <div class='item_sold'>已售出 484</div>
+                  </div>
+                  <div class='item_price'>
+                    <div class='item_price_current'>HKD $55.00</div>
+                    <div class='item_price_old'>$71.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class='block_item'>
+                <div class='item_image'><i class="fas fa-heart"></i></div>
+                <div class='item_info'>
+                  <div class='item_bn'><span class='item_brand'>廚房牌</span> - <span class='item_name'>北海道胡椒粉 橙味</span></div>
+                  <div class='item_stat'>
+                    <div class='item_rate'>
+                      <i class="fas fa-star rate_star" id='st1'></i>
+                      <i class="fas fa-star rate_star" id='st2'></i>
+                      <i class="fas fa-star rate_star" id='st3'></i>
+                      <i class="fas fa-star rate_star" id='st4'></i>
+                      <i class="fas fa-star rate_star" id='st5'></i>  <div style='margin-left:4px;'>(0)</div>
+                    </div>
+                    <div class='item_sold'>已售出 484</div>
+                  </div>
+                  <div class='item_price'>
+                    <div class='item_price_current'>HKD $55.00</div>
+                    <div class='item_price_old'>$71.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class='block_item'>
+                <div class='item_image'><i class="fas fa-heart"></i></div>
+                <div class='item_info'>
+                  <div class='item_bn'><span class='item_brand'>廚房牌</span> - <span class='item_name'>北海道胡椒粉 橙味</span></div>
+                  <div class='item_stat'>
+                    <div class='item_rate'>
+                      <i class="fas fa-star rate_star" id='st1'></i>
+                      <i class="fas fa-star rate_star" id='st2'></i>
+                      <i class="fas fa-star rate_star" id='st3'></i>
+                      <i class="fas fa-star rate_star" id='st4'></i>
+                      <i class="fas fa-star rate_star" id='st5'></i>  <div style='margin-left:4px;'>(0)</div>
+                    </div>
+                    <div class='item_sold'>已售出 484</div>
+                  </div>
+                  <div class='item_price'>
+                    <div class='item_price_current'>HKD $55.00</div>
+                    <div class='item_price_old'>$71.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class='block_item'>
+                <div class='item_image'><i class="fas fa-heart"></i></div>
+                <div class='item_info'>
+                  <div class='item_bn'><span class='item_brand'>廚房牌</span> - <span class='item_name'>北海道胡椒粉 橙味</span></div>
+                  <div class='item_stat'>
+                    <div class='item_rate'>
+                      <i class="fas fa-star rate_star" id='st1'></i>
+                      <i class="fas fa-star rate_star" id='st2'></i>
+                      <i class="fas fa-star rate_star" id='st3'></i>
+                      <i class="fas fa-star rate_star" id='st4'></i>
+                      <i class="fas fa-star rate_star" id='st5'></i>  <div style='margin-left:4px;'>(0)</div>
+                    </div>
+                    <div class='item_sold'>已售出 484</div>
+                  </div>
+                  <div class='item_price'>
+                    <div class='item_price_current'>HKD $55.00</div>
+                    <div class='item_price_old'>$71.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class='block_item'>
+                <div class='item_image'><i class="fas fa-heart"></i></div>
+                <div class='item_info'>
+                  <div class='item_bn'><span class='item_brand'>廚房牌</span> - <span class='item_name'>北海道胡椒粉 橙味</span></div>
+                  <div class='item_stat'>
+                    <div class='item_rate'>
+                      <i class="fas fa-star rate_star" id='st1'></i>
+                      <i class="fas fa-star rate_star" id='st2'></i>
+                      <i class="fas fa-star rate_star" id='st3'></i>
+                      <i class="fas fa-star rate_star" id='st4'></i>
+                      <i class="fas fa-star rate_star" id='st5'></i>  <div style='margin-left:4px;'>(0)</div>
+                    </div>
+                    <div class='item_sold'>已售出 484</div>
+                  </div>
+                  <div class='item_price'>
+                    <div class='item_price_current'>HKD $55.00</div>
+                    <div class='item_price_old'>$71.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class='block_item'>
+                <div class='item_image'><i class="fas fa-heart"></i></div>
+                <div class='item_info'>
+                  <div class='item_bn'><span class='item_brand'>廚房牌</span> - <span class='item_name'>北海道胡椒粉 橙味</span></div>
+                  <div class='item_stat'>
+                    <div class='item_rate'>
+                      <i class="fas fa-star rate_star" id='st1'></i>
+                      <i class="fas fa-star rate_star" id='st2'></i>
+                      <i class="fas fa-star rate_star" id='st3'></i>
+                      <i class="fas fa-star rate_star" id='st4'></i>
+                      <i class="fas fa-star rate_star" id='st5'></i>  <div style='margin-left:4px;'>(0)</div>
+                    </div>
+                    <div class='item_sold'>已售出 484</div>
+                  </div>
+                  <div class='item_price'>
+                    <div class='item_price_current'>HKD $55.00</div>
+                    <div class='item_price_old'>$71.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class='block_item'>
+                <div class='item_image'><i class="fas fa-heart"></i></div>
+                <div class='item_info'>
+                  <div class='item_bn'><span class='item_brand'>廚房牌</span> - <span class='item_name'>北海道胡椒粉 橙味</span></div>
+                  <div class='item_stat'>
+                    <div class='item_rate'>
+                      <i class="fas fa-star rate_star" id='st1'></i>
+                      <i class="fas fa-star rate_star" id='st2'></i>
+                      <i class="fas fa-star rate_star" id='st3'></i>
+                      <i class="fas fa-star rate_star" id='st4'></i>
+                      <i class="fas fa-star rate_star" id='st5'></i>  <div style='margin-left:4px;'>(0)</div>
+                    </div>
+                    <div class='item_sold'>已售出 484</div>
+                  </div>
+                  <div class='item_price'>
+                    <div class='item_price_current'>HKD $55.00</div>
+                    <div class='item_price_old'>$71.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class='block_item'>
+                <div class='item_image'><i class="fas fa-heart"></i></div>
+                <div class='item_info'>
+                  <div class='item_bn'><span class='item_brand'>廚房牌</span> - <span class='item_name'>北海道胡椒粉 橙味</span></div>
+                  <div class='item_stat'>
+                    <div class='item_rate'>
+                      <i class="fas fa-star rate_star" id='st1'></i>
+                      <i class="fas fa-star rate_star" id='st2'></i>
+                      <i class="fas fa-star rate_star" id='st3'></i>
+                      <i class="fas fa-star rate_star" id='st4'></i>
+                      <i class="fas fa-star rate_star" id='st5'></i>  <div style='margin-left:4px;'>(0)</div>
+                    </div>
+                    <div class='item_sold'>已售出 484</div>
+                  </div>
+                  <div class='item_price'>
+                    <div class='item_price_current'>HKD $55.00</div>
+                    <div class='item_price_old'>$71.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class='block_item'>
+                <div class='item_image'><i class="fas fa-heart"></i></div>
+                <div class='item_info'>
+                  <div class='item_bn'><span class='item_brand'>廚房牌</span> - <span class='item_name'>北海道胡椒粉 橙味</span></div>
+                  <div class='item_stat'>
+                    <div class='item_rate'>
+                      <i class="fas fa-star rate_star" id='st1'></i>
+                      <i class="fas fa-star rate_star" id='st2'></i>
+                      <i class="fas fa-star rate_star" id='st3'></i>
+                      <i class="fas fa-star rate_star" id='st4'></i>
+                      <i class="fas fa-star rate_star" id='st5'></i>  <div style='margin-left:4px;'>(0)</div>
+                    </div>
+                    <div class='item_sold'>已售出 484</div>
+                  </div>
+                  <div class='item_price'>
+                    <div class='item_price_current'>HKD $55.00</div>
+                    <div class='item_price_old'>$71.00</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='position_footer'></div>
+    <script src='script/script_event.js'></script>
+  </body>
+</html>

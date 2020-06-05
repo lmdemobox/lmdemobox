@@ -1,0 +1,70 @@
+<script>
+  const timeCounter=(targetDate)=>{
+    let td=new Date(targetDate).getTime();
+    let startInterval=setInterval(function(){
+      let cd=new Date().getTime();
+      let diff=td-cd; //count in seconds, future date = more second
+      let days=Math.floor(diff/(1000*60*60*24));
+      let hours=Math.floor((diff%(1000*60*60^24))/(1000*60));
+      let minutes=Math.floor((diff%(1000*60*60))/(1000*60));
+      let seconds= Math.floor((diff%(1000*60))/1000);
+
+      document.getElementById('counterSpan').innerHTML=days+'d '+hours+'h '+minutes+'m '+seconds+'s ';
+    },1000);
+  }
+
+  timeCounter('June 2, 2020 00:00:00');
+  $(document).ready(function(){
+  });
+</script>
+<body>
+  <div id='section_countDown'>
+    <div class='wrapper'>
+      <div class='section_title'>限時購買 <span id='counterSpan'></span></div>
+      <div class='wrapper_item wrapper_flex_hori'>
+        <div class='brick_item'>
+          <div class='item_image'></div>
+          <div class='item_info'>
+            <div class='item_name'>[期間限定] 挪威三文魚</div>
+            <div class='item_price'>HKD 30.00</div>
+          </div>
+        </div>
+        <div class='brick_item'>
+          <div class='item_image'></div>
+          <div class='item_info'>
+            <div class='item_name'>[期間限定] 挪威三文魚</div>
+            <div class='item_price'>HKD 30.00</div>
+          </div>
+        </div>
+        <div class='brick_item'>
+          <div class='item_image'></div>
+          <div class='item_info'>
+            <div class='item_name'>[期間限定] 挪威三文魚</div>
+            <div class='item_price'>HKD 30.00</div>
+          </div>
+        </div>
+        <div class='brick_item'>
+          <div class='item_image'></div>
+          <div class='item_info'>
+            <div class='item_name'>[期間限定] 挪威三文魚</div>
+            <div class='item_price'>HKD 30.00</div>
+          </div>
+        </div>
+        <div class='brick_item'>
+          <div class='item_image'></div>
+          <div class='item_info'>
+            <div class='item_name'>[期間限定] 挪威三文魚</div>
+            <div class='item_price'>HKD 30.00</div>
+          </div>
+        </div>
+        <div class='brick_item'>
+          <div class='item_image'></div>
+          <div class='item_info'>
+            <div class='item_name'>[期間限定] 挪威三文魚</div>
+            <div class='item_price'>HKD 30.00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
