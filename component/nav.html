@@ -1,0 +1,69 @@
+<script>
+  $(document).ready(function(){
+    $('div.b4_login').hide();
+    $('div#wrapper_userBrick').on('click',function(){
+      window.location.href = "./mix-s/wall.html";
+    });
+  });
+</script>
+<body>
+<div id='navigation'>
+  <div class='wrapper wrapper_flex_full'>
+    <div class='wrapper_left'>
+      <div class='meun_language'>
+        <div class='meun_option'>中文</div>
+      </div>
+      <div class='wrapper_redirect'>
+        <a href='' class='btn_redirect'>聯絡我們</a>
+        <a href='' class='btn_redirect'>賣家中心</a>
+        <a href='' class='btn_redirect'>自取點</a>
+        <a href='' class='btn_redirect'>APP</a>
+      </div>
+      <div class='wrapper_media'>
+        <a href='' class='btn_media'><i class="fab fa-facebook-f"></i></a>
+        <a href='' class='btn_media'><i class="fab fa-instagram"></i></a>
+        <a href='' class='btn_media'><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class='wrapper_middle'>
+      <!-- reserved -->
+    </div>
+    <div class='wrapper_right b4_login'>
+      <div class='wrapper_action'>
+        <div class='btn_action'>註冊</div>
+        <div class='btn_action'>登入</div>
+      </div>
+    </div>
+    <div class='wrapper_right af_login active'>
+      <div class='wrapper_user wrapper_flex_vert'  id='wrapper_userBrick'>
+        <div class='user_icon' id='user_icon'></div>
+        <div class='user_name' id='user_name'>PeterParker</div>
+      </div>
+      <div class='wrapper_redirect wrapper_flex_vert'>
+        <a href='myorders.html' class='btn_redirect'><i class="fas fa-boxes"></i>我的訂單</a>
+        <a href='./mix-s/wall.html' class='btn_redirect'><i class="fas fa-home"></i>社交動態</a>
+        <a href='index.html' class='btn_redirect'><i class="fas fa-shopping-bag"></i>購物主頁</a>
+      </div>
+      <div class='wrapper_function wrapper_flex_vert'>
+        <div class='btn_noti'><i class="fas fa-flag"></i></div>
+        <div class='btn_noti'><i class="fas fa-envelope"></i></div>
+        <div class='btn_noti'><i class="fas fa-bell"></i></div>
+        <div class='btn_noti'><i class="fas fa-user-friends"></i></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='searchBar'>
+  <div class='wrapper wrapper_flex_full'>
+    <div class='wrapper_left'>
+      <a href='./mix-s/wall.html' id='logo'><img src='image/linkedmarts-logo_w.png'/></a>
+    </div>
+    <div class='wrapper_right'>
+      <div class='wrapper_input wrapper_flex_full'>
+        <input id='input_box' placeholder="輸入關鍵字( 產品名稱、產品種類、品牌...... )"/>
+        <button>搜尋</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

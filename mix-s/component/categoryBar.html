@@ -1,0 +1,107 @@
+<script>
+  $(document).ready(function(){
+    const number_cat=10;
+    const array_cat=['今期流行','熱門產品','食品及飲料','美容及個人護理','母親及嬰兒','電子產品','休閒娛樂','健康及保健','寵物'];
+    array_cat.forEach(function(item,index,array){
+      let message_to_print='';
+      message_to_print+="<div class='block_cat' id='id_cat_"+index+"'>";
+      message_to_print+="<div class='image_cat'></div>";
+      message_to_print+="<div class='name_cat'>"+item+"</div></div>";
+      $('div#wrapper_category').append(message_to_print);
+    });
+    // addEventListener //
+    const btn_slide_pre=document.querySelector('button#click_pre');
+    const btn_slide_nex=document.querySelector('button#click_nex');
+    $('div.wrapper_category').scrollLeft(0);
+
+
+    $('#id_cat_7,#id_cat_8').append('<span class="tag_comingSoon">coming soon</span>');
+
+
+    btn_slide_pre.addEventListener('click',(e)=>{
+      $('div.wrapper_category').animate({scrollLeft:'-=137.5'},500);
+      $('button#click_pre').css('display','none');
+      $('button#click_nex').css('display','block');
+    });
+    btn_slide_nex.addEventListener('click',(e)=>{
+      $('div.wrapper_category').animate({scrollLeft:'+=137.5'},500);
+      $('button#click_pre').css('display','block');
+      $('button#click_nex').css('display','none');
+    });
+    $('div.block_cat').on('mouseenter',function(){
+      let target=$(this).attr('id').replace('id_cat_','id_sc_');
+      $('div.container_subcat').removeClass('active');
+      $('div#'+target).addClass('active');
+    });
+    $('div#section_category>div.wrapper').on('mouseleave',function(){
+      $('div.container_subcat').removeClass('active');
+    });
+    $('div.title_subcat').on('mouseenter',function(){
+      $('div.title_subcat,div.block_subcat').removeClass('active');
+      $(this).addClass('active');
+      //
+      let target=$(this).attr('id').replace('t_','b_');
+      $('div#'+target).addClass('active');
+    });
+  });
+
+</script>
+
+<body>
+  <div id='section_category'>
+    <div class='wrapper'>
+      <div class='wrapper_category' id='wrapper_category'>
+        <!-- something print here -->
+      </div>
+      <button class='btn_cat_slide' id='click_pre'><</button>
+      <button class='btn_cat_slide' id='click_nex'>></button>
+      <div class='wrapper_subcat'>
+        <div class='container_subcat' id='id_sc_0'>
+          <div class='wrapper'>
+            <div class='list_subcat_title'>
+              <div class='title_subcat active' id='t_sc2_1'><a href='./category.html'>化妝品</a></div>
+              <div class='title_subcat' id='t_sc2_2'>皮膚護理</div>
+              <div class='title_subcat' id='t_sc2_3'>香水/香薰</div>
+              <div class='title_subcat' id='t_sc2_4'>Bath & Body</div>
+              <div class='title_subcat' id='t_sc2_5'>個人護理</div>
+            </div>
+            <div class='list_subcat_item'>
+              <div class='block_subcat active' id='b_sc2_1'>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>面妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>眼妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>唇妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>面妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>眼妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>唇妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>面妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>眼妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>唇妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>面妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>唇妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>面妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>眼妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>唇妝</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>面妝</div></div>
+              </div>
+              <div class='block_subcat' id='b_sc2_2'>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>Body Care</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>Eyes Care</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>Face Care</div></div>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>Lips Care</div></div>
+              </div>
+              <div class='block_subcat' id='b_sc2_3'>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>香水</div></div>
+              </div>
+              <div class='block_subcat' id='b_sc2_4'>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>Soap</div></div>
+              </div>
+              <div class='block_subcat' id='b_sc2_5'>
+                <div class='item_subcat'><div class='image_sc_item'></div><div class='name_sc_item'>Condom & Sexual Wellness</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
