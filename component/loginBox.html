@@ -1,0 +1,37 @@
+<script>
+  $(document).ready(function(){
+    $('input#password').on('input',function(){
+      if($(this).val()!=''&&$(this).val()!=' '){
+        console.log('r');
+        $('div.wrapper_cpw').addClass('active');
+      }
+    });
+  });
+</script>
+<body>
+  <div id='section_loginBox'>
+    <div class='wrapper_m'>
+      <div class='wrapper_signup'>
+        <div class='logo_div'><img src='image/linkedmarts-logo.png'/></div>
+        <div class='headline'>
+          <div class='subtitle'>登入</div>
+          <div class='des'>未有帳號? 立即<a href='./signup.html'>註冊</a></div>
+        </div>
+        <form>
+          <div class='wrapper_row'>
+            <input class='c_inputBox' id='usernameOphoneOemail' placeholder='用戶名稱/電話號碼/電子郵件'/>
+          </div>
+          <div class='wrapper_row'>
+            <input type='password' class='c_inputBox' id='password' placeholder='密碼'/>
+          </div>
+          <div class='wrapper_row'>
+            <a href='' class='hlink_forgetpw'>忘記密碼?</a>
+          </div>
+          <div class='wrapper_row'>
+            <button class='btn_signin' id='btn_signin'>登入</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

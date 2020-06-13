@@ -1,8 +1,32 @@
 <script>
   $(document).ready(function(){
-    $('div.b4_login').hide();
+
+
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    console.log( page );
+    if(page=='index.html'){
+      $('div.af_login').hide();
+    }else{
+      $('div.b4_login').hide();
+    }
+    $('button#btn_si').on('click',function(){
+      window.location.href = "./searchresult.html";
+    });
     $('div#wrapper_userBrick').on('click',function(){
       window.location.href = "./mix-s/wall.html";
+    });
+    $('div.btn_noti_this').on('mouseenter',function(){
+      $('div.meun_dropdown').addClass('active');
+    }).on('mouseleave',function(){
+      $('div.meun_dropdown').removeClass('active');
+    });
+    $('div.switch_tap').on('click',function(){
+      $('div.switch_tap').removeClass('active');
+      $(this).addClass('active');
+      let target=$(this).attr('id').replace('switch_tap','wrapper_notidiff_section');
+      $('div.wrapper_notidiff_section').removeClass('active');
+      $('div#'+target).addClass('active');
     });
   });
 </script>
@@ -15,7 +39,7 @@
       </div>
       <div class='wrapper_redirect'>
         <a href='' class='btn_redirect'>聯絡我們</a>
-        <a href='' class='btn_redirect'>賣家中心</a>
+        <a href='./vendorportal.html' class='btn_redirect'>賣家中心</a>
         <a href='' class='btn_redirect'>自取點</a>
         <a href='' class='btn_redirect'>APP</a>
       </div>
@@ -30,8 +54,8 @@
     </div>
     <div class='wrapper_right b4_login'>
       <div class='wrapper_action'>
-        <div class='btn_action'>註冊</div>
-        <div class='btn_action'>登入</div>
+        <a href='./signup.html' class='btn_action'>註冊</a>
+        <a href='./login.html' class='btn_action'>登入</a>
       </div>
     </div>
     <div class='wrapper_right af_login active'>
@@ -47,7 +71,137 @@
       <div class='wrapper_function wrapper_flex_vert'>
         <div class='btn_noti'><i class="fas fa-flag"></i></div>
         <div class='btn_noti'><i class="fas fa-envelope"></i></div>
-        <div class='btn_noti'><i class="fas fa-bell"></i></div>
+        <div class='btn_noti btn_noti_this'>
+          <i class="fas fa-bell"></i>
+          <div class='meun_dropdown'>
+            <div class='wrapper_row_switch_tap'>
+              <div class='switch_tap active' id='switch_tap_01'>好友</div>
+              <div class='switch_tap' id='switch_tap_02'>購物</div>
+            </div>
+            <div class='wrapper_notidiff_section active' id='wrapper_notidiff_section_01'>
+              <div class='wrapper_noti_section wrapper_noti_section_request active'>
+                <div class='headline'>好友請求</div>
+                <div class='wrapper_row_noti_row noti_row_linkrequest'>
+                  <div class='noti_user_info_image'><div></div></div>
+                  <div class='noti_content'>
+                    <a class='noti_user_info_name' href=''>Moobmoobmomru</a> 提出link要求
+                  </div>
+                  <div class='noti_btns'><button class='btn_in_noti btn_in_noti_accept'>接受</button></div>
+                </div>
+              </div>
+              <div class='wrapper_noti_section wrapper_noti_section_news active'>
+                <div class='headline'>好友動態</div>
+                <div class='wrapper_row_noti_row noti_row_like'>
+                  <div class='noti_user_info_image'><div></div></div>
+                  <div class='noti_content'>
+                    <a class='noti_user_info_name' href=''>Moobmoobmomru</a> 已讚好你的評論
+                  </div>
+                </div>
+                <div class='wrapper_row_noti_row noti_row_comment'>
+                  <div class='noti_user_info_image'><div></div></div>
+                  <div class='noti_content'>
+                    <a class='noti_user_info_name' href=''>Moobmoobmomru</a> 已回應你的評論
+                  </div>
+                </div>
+                <div class='wrapper_row_noti_row noti_row_nusuggestion'>
+                  <div class='noti_user_info_image'><div></div></div>
+                  <div class='noti_content'>
+                    新朋友建議  <a class='noti_user_info_name' href=''>Moobmoobmomru</a>
+                  </div>
+                </div>
+                <div class='wrapper_row_noti_row noti_row_linkednoti'>
+                  <div class='noti_user_info_image'><div></div></div>
+                  <div class='noti_content'>
+                    <a class='noti_user_info_name' href=''>Moobmoobmomru</a> 已接受你的link請求
+                  </div>
+                </div>
+                <div class='wrapper_row_noti_row noti_row_linkrequest'>
+                  <div class='noti_user_info_image'><div></div></div>
+                  <div class='noti_content'>
+                    <span style='font-weight:600;'>有其他用戶</span> 加入你的團購項目
+                  </div>
+                  <div class='noti_btns'><button class='btn_in_noti btn_in_noti_view'>查看</button></div>
+                </div>
+              </div>
+            </div>
+            <div class='wrapper_notidiff_section' id='wrapper_notidiff_section_02'>
+              <div class='wrapper_noti_p_section wrapper_noti_p_section_groupStatus active'>
+                <div class='headline'>已開團購的項目</div>
+                <div class='wrapper_row_noti_p_row noti_row_groupStatus'>
+                  <div class='noti_product_info_image'><div style='background-image:url("image/001.jpg")'></div></div>
+                  <div class='noti_product_content'>
+                    <a class='noti_product_name' href=''>太陽牌 - 五香肉丁白朱古力10片裝[復刻版]</a>
+                    <div class='noti_product_numofgroup'>剩餘 5 個名額</div>
+                  </div>
+                </div>
+              </div>
+              <div class='wrapper_noti_p_section wrapper_noti_p_section_orderStatus active'>
+                <div class='headline'>訂單狀態</div>
+                <div class='wrapper_row_noti_p_row noti_row_orderStatus'>
+                  <div class='noti_product_info_image'><div style='background-image:url("image/002.jpg")'></div></div>
+                  <div class='noti_product_content'>
+                    <div><a class='noti_product_name' href=''>印度牌 - 海底椰子汁700ml[10周年版]</a></div>
+                    <div class='noti_product_orderNo'>OR2005000812</div>
+                    <div class='noti_product_orderStatus'>運送中 <i class="fas fa-truck"></i></div>
+                  </div>
+                  <div class='noti_p_btns'><button class='btn_in_noti_p btn_in_noti_p_view'>查看</button></div>
+                </div>
+                <div class='wrapper_row_noti_p_row noti_row_orderStatus'>
+                  <div class='noti_product_info_image'><div style='background-image:url("image/003.jpg")'></div></div>
+                  <div class='noti_product_content'>
+                    <div><a class='noti_product_name' href=''>銀河牌 - 天然北極冰層水250ml</a></div>
+                    <div class='noti_product_orderNo'>OR2005042812</div>
+                    <div class='noti_product_orderStatus'>運送中 <i class="fas fa-truck"></i></div>
+                  </div>
+                  <div class='noti_p_btns'><button class='btn_in_noti_p btn_in_noti_p_view'>查看</button></div>
+                </div>
+              </div>
+              <div class='wrapper_noti_p_section wrapper_noti_p_section_orderTake active'>
+                <div class='headline'>取貨通知</div>
+                <div class='wrapper_row_noti_p_row noti_row_orderStatus'>
+                  <div class='noti_product_info_image'><div style='background-image:url("image/002.jpg")'></div></div>
+                  <div class='noti_product_content'>
+                    <div><a class='noti_product_name' href=''>印度牌 - 海底椰子汁700ml[10周年版]</a></div>
+                    <div class='noti_product_orderNo'>OR2005000812</div>
+                    <div class='noti_product_orderStatus'>已送達 <i class="fas fa-clipboard-check"></i></div>
+                  </div>
+                  <div class='noti_p_btns'><button class='btn_in_noti_p btn_in_noti_p_view'>查看</button></div>
+                </div>
+                <div class='wrapper_row_noti_p_row noti_row_orderStatus'>
+                  <div class='noti_product_info_image'><div style='background-image:url("image/003.jpg")'></div></div>
+                  <div class='noti_product_content'>
+                    <div><a class='noti_product_name' href=''>銀河牌 - 天然北極冰層水250ml</a></div>
+                    <div class='noti_product_orderNo'>OR2005042812</div>
+                    <div class='noti_product_orderStatus'>已送達 <i class="fas fa-clipboard-check"></i></div>
+                  </div>
+                  <div class='noti_p_btns'><button class='btn_in_noti_p btn_in_noti_p_view'>查看</button></div>
+                </div>
+              </div>
+              <div class='wrapper_noti_p_section wrapper_noti_p_section_orderReview active'>
+                <div class='headline'>評論通知</div>
+                <div class='wrapper_row_noti_p_row noti_row_orderStatus'>
+                  <div class='noti_product_info_image'><div style='background-image:url("image/002.jpg")'></div></div>
+                  <div class='noti_product_content'>
+                    <div><a class='noti_product_name' href=''>印度牌 - 海底椰子汁700ml[10周年版]</a></div>
+                    <div class='noti_product_orderNo'>OR2005000812</div>
+                    <div class='noti_product_orderStatus'>已送達 <i class="fas fa-clipboard-check"></i></div>
+                  </div>
+                  <div class='noti_p_btns'><button class='btn_in_noti_p btn_in_noti_p_view'>評論</button></div>
+                </div>
+                <div class='wrapper_row_noti_p_row noti_row_orderStatus'>
+                  <div class='noti_product_info_image'><div style='background-image:url("image/003.jpg")'></div></div>
+                  <div class='noti_product_content'>
+                    <div><a class='noti_product_name' href=''>銀河牌 - 天然北極冰層水250ml</a></div>
+                    <div class='noti_product_orderNo'>OR2005042812</div>
+                    <div class='noti_product_orderStatus'>已送達 <i class="fas fa-clipboard-check"></i></div>
+                  </div>
+                  <div class='noti_p_btns'><button class='btn_in_noti_p btn_in_noti_p_view'>評論</button></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
         <div class='btn_noti'><i class="fas fa-user-friends"></i></div>
       </div>
     </div>
@@ -59,9 +213,38 @@
       <a href='./mix-s/wall.html' id='logo'><img src='image/linkedmarts-logo_w.png'/></a>
     </div>
     <div class='wrapper_right'>
-      <div class='wrapper_input wrapper_flex_full'>
-        <input id='input_box' placeholder="輸入關鍵字( 產品名稱、產品種類、品牌...... )"/>
-        <button>搜尋</button>
+      <div class='wrapper_input showing'>
+        <div class='wrapper_ip wrapper_flex_full'>
+          <input id='input_box' placeholder="輸入關鍵字( 產品名稱、產品種類、品牌...... )"/>
+          <button id='btn_si'>搜尋</button>
+        </div>
+        <div class='wrapper_input_autofill'>
+          <div class='wrapper_subsection'>
+            <div class='subsection_title'>分類</div>
+            <div class='subsection_item'>今期流行 > 化妝品 > 眼妝</div>
+          </div>
+          <div class='wrapper_subsection'>
+            <div class='subsection_title'>你可能感到興趣的</div>
+            <div class='subsection_item'>眼妝 - 化妝品</div>
+            <div class='subsection_item'>眼妝 - 食品及飲料</div>
+            <div class='wrapper_subsection_itemwrapper'>
+              <div class='subsection_item_brick'>
+                <div class='o_productPic'><div class='o_pd_image' style='background-image:url("image/003.jpg")'></div></div>
+                <div class='o_productInfo'>
+                  <a href=''><span class='o_pd_brand'>沙田牌</span> - <span class='o_pd_name'>非洲天然岩鹽 250磅裝[香蕉味特別版]</span></a>
+                  <div class='o_productPrice'>440.00</div>
+                </div>
+              </div>
+              <div class='subsection_item_brick'>
+                <div class='o_productPic'><div class='o_pd_image' style='background-image:url("image/002.jpg")'></div></div>
+                <div class='o_productInfo'>
+                  <a href=''><span class='o_pd_brand'>沙田牌</span> - <span class='o_pd_name'>非洲天然岩鹽 250磅裝[香蕉味特別版]</span></a>
+                  <div class='o_productPrice'>440.00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

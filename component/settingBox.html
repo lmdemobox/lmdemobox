@@ -1,0 +1,166 @@
+<script>
+  $(document).ready(function(){
+    $('button').on('click',function(event){
+      event.preventDefault();
+    });
+    $('div.btn_switch').on('click',function(){
+      $('div.btn_switch').removeClass('active');
+      $(this).addClass('active');
+      $('div.wrapper_display').removeClass('active');
+      let target=$(this).attr('id').replace('switch','block');
+      $('div#'+target).addClass('active');
+    });
+    $('button.btn_block').hover(function(){
+      $(this).html('解除封鎖?');
+    },function(){
+      $(this).html('已封鎖');
+    });
+  });
+</script>
+<body>
+  <div id='section_settingBox'>
+    <div class='wrapper'>
+      <div class='section_title'>
+        設定
+      </div>
+      <div class='section_content'>
+        <div class='wrapper_m'>
+          <div class='wrapper_left'>
+            <div class='wrapper_row btn_switch active' id='switch_setting_01'>個人資料</div>
+            <div class='wrapper_row btn_switch' id='switch_setting_02'>私隱設定</div>
+            <div class='wrapper_row btn_switch' id='switch_setting_03'>更改密碼</div>
+            <div class='wrapper_row btn_switch' id='switch_setting_04'>電子郵件 及 SMS</div>
+          </div>
+          <!----->
+          <div class='wrapper_right'>
+            <div class='wrapper_display active' id='block_setting_01' >
+              <form>
+                <div class='wrapper_row'>
+                  <label>用戶名稱</label>
+                  <input class='c_inputBox' id='username' placeholder='用戶名稱'/>
+                </div>
+                <div class='wrapper_row'>
+                  <label>姓氏</label>
+                  <input class='c_inputBox' id='name_last' placeholder=''/>
+                </div>
+                <div class='wrapper_row'>
+                  <label>名字</label>
+                  <input class='c_inputBox' id='name_first' placeholder=''/>
+                </div>
+                <div class='wrapper_row'>
+                  <label>個人簡介</label>
+                  <input class='c_inputBox' id='bio' placeholder=''/>
+                </div>
+                <div class='wrapper_row'>
+                  <label>電子郵件</label>
+                  <input class='c_inputBox' id='email' placeholder=''/>
+                </div>
+                <div class='wrapper_row'>
+                  <label>電話號碼</label>
+                  <input class='c_inputBox' id='phonenum' placeholder=''/>
+                </div>
+                <div class='wrapper_row_b'>
+                  <button class='btn_save' id='btn_save'>儲存</button>
+                </div>
+              </form>
+            </div>
+            <div class='wrapper_display' id='block_setting_02' >
+              <form>
+                <div class='wrapper_row_s'>
+                  <input type="radio" id="yespp" name="privateprofile" value="yes">
+                  <label for="yespp">私人檔案</label>
+                  <div class='des'>如果您的帳戶是私人帳戶，則只有您批准的人才能在LinkedMarts上看到您的照片和視頻。 您現有的Linkers不會受到影響。</div>
+                </div>
+                <div class='wrapper_row_l'>
+                  <div class='subtitle'>已封鎖帳號</div>
+                  <div class='wrapper_row_user'>
+                    <div class='user_info'>
+                      <div class='user_image'></div>
+                      <div class='user_name'>pringlestomato</div>
+                    </div>
+                    <div><button class='btn_block'>已封鎖</button></div>
+                  </div>
+                  <div class='wrapper_row_user'>
+                    <div class='user_info'>
+                      <div class='user_image'></div>
+                      <div class='user_name'>bananamilk</div>
+                    </div>
+                    <div><button class='btn_block'>已封鎖</button></div>
+                  </div>
+                  <div class='wrapper_row_user'>
+                    <div class='user_info'>
+                      <div class='user_image'></div>
+                      <div class='user_name'>stupidkid</div>
+                    </div>
+                    <div><button class='btn_block'>已封鎖</button></div>
+                  </div>
+                </div>
+                <div class='wrapper_row_l'>
+                  <div class='subtitle'>Tagged Post</div>
+                  <div class='wrapper_row_xs'>
+                    <input type="radio" id="addAuto" name="addPost" value="yes">
+                    <label for="addAuto">自動加入</label>
+                  </div>
+                  <div class='wrapper_row_xs'>
+                    <input type="radio" id="addManually" name="addPost" value="yes">
+                    <label for="addManually">手動加入</label>
+                  </div>
+                </div>
+                <div class='wrapper_row_b'>
+                  <button class='btn_save' id='btn_save'>儲存</button>
+                </div>
+              </form>
+
+            </div>
+            <div class='wrapper_display' id='block_setting_03' >
+              <form>
+                <div class='wrapper_row'>
+                  <label>現有密碼</label>
+                  <input class='c_inputBox' id='password_old' placeholder='用戶名稱'/>
+                </div>
+                <div class='wrapper_row'>
+                  <label>新密碼</label>
+                  <input class='c_inputBox' id='password_new' placeholder=''/>
+                </div>
+                <div class='wrapper_row'>
+                  <label>確認新密碼</label>
+                  <input class='c_inputBox' id='password_new_confirm' placeholder=''/>
+                </div>
+                <div class='wrapper_row_b'>
+                  <button class='btn_save' id='btn_save'>儲存</button>
+                </div>
+              </form>
+            </div>
+            <div class='wrapper_display' id='block_setting_04' >
+              <form>
+                <div class='wrapper_row_s'>
+                  <div class='subtitle'>電子郵件</div>
+                  <input type="radio" id="yespp" name="email01" value="yes">
+                  <label for="yespp">訂單資訊</label>
+                  <div class='des'>獲取有關您的訂單狀態的通知。</div>
+                  <input type="radio" id="yespp" name="email02" value="yes">
+                  <label for="yespp">推薦貨品</label>
+                  <div class='des'>獲取產品發布提醒。</div>
+                  <input type="radio" id="yespp" name="email03" value="yes">
+                  <label for="yespp">最新消息</label>
+                  <div class='des'>隨時了解您錯過的事情。</div>
+
+                </div>
+                <div class='wrapper_row_s'>
+                  <div class='subtitle'>SMS</div>
+                  <input type="radio" id="opSMS_1" name="opSMS" value="yes">
+                  <label for="opSMS_1">取貨提示短信</label>
+                  <div class='des'>當您的訂單到達並準備取貨時通知您。</div>
+                </div>
+                <div class='wrapper_row_b'>
+                  <button class='btn_save' id='btn_save'>儲存</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

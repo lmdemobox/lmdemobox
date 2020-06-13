@@ -1,7 +1,6 @@
 <script>
   $(document).ready(function(){
-    $('div.payment_btn').on('click',function(){
-      console.log('d');
+    $('div#payment_btn_g').on('click',function(){
       window.location.href = "./checkout.html";
     });
   });
@@ -9,7 +8,7 @@
 <body>
   <div id='section_productDetail'>
     <div class='breadcrumbs'>
-      <a href=''>食品及飲料</a> > <a href=''>零食<a/> > <a href=''>有機食品</a>
+      <a href=''>食品及飲料</a> > <a href=''>零2食<a/> > <a href=''>有機食品</a>
     </div>
     <div class='wrapper'>
       <div class='wrapper_productDetail'>
@@ -62,7 +61,7 @@
           </div>
 
           <div class='payment_btn_wrapper info_sect'>
-            <div class='payment_btn'>單獨購買 <i class="fas fa-gift"></i></div>
+            <div class='payment_btn' data-toggle="modal" data-target="#loginBox">單獨購買 <i class="fas fa-gift"></i></div>
             <div class='payment_btn' id='payment_btn_g'>團購 <i class="fas fa-people-carry"></i></div>
           </div>
 
@@ -80,7 +79,7 @@
                       <div class='gl_user_name'>Ke********</div>
                       <div class='gl_countdown' id='gl_countdown_1'></div>
                     </div>
-                    <div class='gl_message'>3個名額 <span class='btn_join'>加入</span></div>
+                    <div class='gl_message'>3個名額 <span class='btn_join' data-toggle="modal" data-target="#loginBox">加入</span></div>
                   </div>
                   <div class='groupC_list'>
                     <div class='gl_user_image'></div>
@@ -88,7 +87,7 @@
                       <div class='gl_user_name'>Lf********</div>
                       <div class='gl_countdown' id='gl_countdown_2'></div>
                     </div>
-                    <div class='gl_message'>1個名額 <span class='btn_join'>加入</span></div>
+                    <div class='gl_message'>1個名額 <span class='btn_join' data-toggle="modal" data-target="#loginBox">加入</span></div>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,77 @@
+<script>
+  $(document).ready(function(){
+    $('button#btn_signin').on('click',function(event){
+      event.preventDefault();
+      window.location.href = "./setupprofile.html";
+    });
+    const timeCounter=()=>{
+      let timeout_counter=0;
+      let timeout_counter_bw=30;
+      let startInterval=setInterval(function(){
+        timeout_counter++;
+        $('button#phone_getconfirm').addClass('disabled');
+        if(timeout_counter<=30){
+          let ct=new Date();
+          $('button#phone_getconfirm').html('重新取得 '+timeout_counter_bw+' s');
+          timeout_counter_bw--;
+        }else{
+          clearInterval(startInterval);
+          $('button#phone_getconfirm').removeClass('disabled');
+          $('button#phone_getconfirm').html('取得確認碼');
+        }
+      },1000);
+    }
+
+    $('input#password').on('input',function(){
+      if($(this).val()!=''&&$(this).val()!=' '){
+        console.log('r');
+        $('div.wrapper_cpw').addClass('active');
+      }
+    });
+    $('button#phone_getconfirm').on('click',function(event){
+      event.preventDefault();
+      timeCounter();
+    });
+  });
+</script>
+<body>
+  <div id='section_signupBox'>
+    <div class='wrapper_m'>
+      <div class='wrapper_signup'>
+        <div class='logo_div'><img src='image/linkedmarts-logo.png'/></div>
+        <div class='headline'>
+          <div class='subtitle'>註冊</div>
+          <div class='des'>已有帳號? 立即<a href='./login.html'>登入</a></div>
+        </div>
+        <form>
+          <div class='wrapper_row'>
+            <input class='c_inputBox' id='username' placeholder='用戶名稱'/>
+          </div>
+          <div class='wrapper_row'>
+            <input type='password' class='c_inputBox' id='password' placeholder='密碼'/>
+          </div>
+          <div class='wrapper_row wrapper_cpw'>
+            <input type='password' class='c_inputBox' id='c_password' placeholder='確認密碼'/>
+          </div>
+          <div class='wrapper_row'>
+            <input class='c_inputBox' id='email' placeholder='電子郵件'/>
+          </div>
+          <div class='wrapper_row_mix'>
+            <div class='pre_des'>+852</div>
+            <input class='c_inner_inputBox' id='phone' placeholder='電話號碼'/>
+            <button class='c_inner_btn' id='phone_getconfirm'>取得確認碼</button>
+          </div>
+          <div class='wrapper_row'>
+            <input class='c_inputBox' id='phone_confirmcode' placeholder='輸入確認碼'/>
+          </div>
+          <div class='wrapper_row'>
+            <div class='des'>點擊立即註冊後，即代表您同意我們的<a href=''>使用條款和用戶隱私條款</a>。</div>
+          </div>
+          <div class='wrapper_row'>
+            <button class='btn_signin' id='btn_signin'>註冊</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

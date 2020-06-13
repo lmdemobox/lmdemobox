@@ -1,0 +1,88 @@
+<script>
+  $(document).ready(function(){
+    $('div.btn_outpost').on('click',function(){
+      console.log('r');
+      $('div.wrapper_outpost').toggleClass('active');
+    });
+    $('div.outpost_upload_pic').on('click',function(){
+      $('div.outpost_textarea').addClass('active');
+    });
+    $('div.fff').on('click',function(){
+      $('input#input_newsfeed').toggleClass('active');
+    });
+    $('textarea#post_textarea').on('input',function(){
+      if($(this).val()!=''&&$(this).val()!=' '){
+        $('div.btn_confirm_post').addClass('active');
+      }
+    });
+    $('div.radio_wrapper').on('click',function(){
+      $(this).toggleClass('clicked');
+    });
+  });
+</script>
+<div id='section_reviewContent'>
+  <div class='breadcrumbs'>
+    <a href=''>我的訂單</a> > <a href=''>貨品評價</a>
+  </div>
+  <div class='wrapper'>
+    <div class='section_title'>
+      貨品評價
+    </div>
+    <div class='section_content'>
+      <div class='wrapper_oproduct'>
+        <div class='wrapper_productStat'>
+          <div class='o_productPic'><div class='o_pd_image' style='background-image:url("image/003.jpg")'></div></div>
+          <div class='o_productInfo'>
+            <a href=''><span class='o_pd_brand'>沙田牌</span> - <span class='o_pd_name'>非洲天然岩鹽 250磅裝[香蕉味特別版]</span></a>
+            <div class='o_productQty'>數量: 5</div>
+            <a href='' class='o_productVd'>柴米油鹽批發</a>
+          </div>
+          <div class='o_productPrice'>440.00</div>
+          <div class='o_orderStatus'>
+            <div class='o_orderShippongStatus'>到了 <i class="fas fa-truck"></i></div>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class='wrapper_commentRate''>
+        <div class='wrapper_outpost'>
+          <div class='wrapper_row'><div class='subtitle'>同其他人分享你嘅體驗 <i class="fas fa-rocket"></i></div></div>
+          <div class='wrapper_row'>
+            <div class='cUser_pic'><div></div></div>
+            <div class='outpost_inputarea'>
+              <div class='outpost_upload_pic'>
+                <div>+</div>
+                <div>請先上載貨品圖片</div>
+              </div>
+              <div class='outpost_textarea'>
+                <textarea id='post_textarea' placeholder='打啲野出post...'></textarea>
+                <div class='wrapper_btn_action'>
+                  <div class='btn_confirm_post'>出POST</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- -->
+        <div class='wrapper_rating'>
+          <div class='subtitle'>評分</div>
+          <div class='wrapper_row_star'>
+            <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+          </div>
+          <hr/>
+          <div class='wrapper_anony'>
+            <div class='row_content'>
+              <div class='des'>匿名</div>
+              <div class='radio_wrapper'><span class='checkmark'></span></div>
+            </div>
+            <div class='subdes'>
+              評論只會顯示在產品評論部分(您的姓名將被隱藏),不會發佈到您的牆上。
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--- --->
+</div>

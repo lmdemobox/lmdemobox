@@ -1,0 +1,144 @@
+<script>
+  $(document).ready(function(){
+    $('button#btn_next').on('click',function(event){
+        event.preventDefault();
+        $('div.wrapper_m').hide();
+        $('div.wrapper_mm').show();
+        window.scroll({
+          top: 0,
+          behavior: 'smooth'
+        });
+    });
+    $('div.brick_interest').on('click',function(){
+      $(this).toggleClass('active');
+
+    });
+  });
+</script>
+<body>
+  <div id='section_setupprofileBox'>
+    <div class='wrapper_m'>
+      <div class='wrapper_signup'>
+        <div class='headline'>
+          <div class='subtitle'>個人資料</div>
+        </div>
+        <form>
+          <div class='wrapper_row'>
+            <div class='wrapper_imageupload'>
+              上載個人照片
+            </div>
+          </div>
+          <div class='wrapper_row_m'>
+            <input class='c_inputBox_d' id='name_last' placeholder='名子'/>
+            <input class='c_inputBox_d' id='name_first' placeholder='姓氏'/>
+          </div>
+          <div class='wrapper_row'>
+            <input type='password' class='c_inputBox' id='dob' placeholder='出生日期'/>
+          </div>
+          <div class='wrapper_row'>
+            <select id="gender" name="gender">
+              <option value=""disabled selected>性別</option>
+              <option value="male">男</option>
+              <option value="female">女</option>
+              <option value="rathernotsay">不透露</option>
+            </select>
+          </div>
+          <div class='wrapper_row'>
+            <select id="educationlevel" name="education">
+              <option value=""disabled selected>教育程度</option>
+              <option value="ss">小學</option>
+              <option value="ms">中學</option>
+              <option value="u">大學</option>
+            </select>
+          </div>
+          <div class='wrapper_row'>
+            <select id="occupation" name="occupation">
+              <option value=""disabled selected>職業</option>
+              <option value="ss">IT</option>
+              <option value="ms">OL</option>
+              <option value="u">司機</option>
+            </select>
+          </div>
+          <div class='wrapper_row'>
+            <select id="ys" name="ys">
+              <option value=""disabled selected>年薪</option>
+              <option value="ss">0</option>
+              <option value="ms">1</option>
+              <option value="u">2</option>
+            </select>
+          </div>
+          <div class='wrapper_row'>
+            <button class='btn_next' id='btn_next'>下一步</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class='wrapper_mm' style='display:none;'>
+      <div class='wrapper_interest'>
+        <div class='headline'>
+          <div class='subtitle'>請選擇你的興趣</div>
+          <div class='des'>至少選擇5個類別</div>
+        </div>
+        <div class='wrapper_interest_content'>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>美容產品</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>食品及飲料</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>嬰兒產品</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>電子產品</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>寵物用品</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>戶外用品</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>運動用品</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>旅遊</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>有機食品</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>手工產品</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>汽車</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>音樂</div>
+          </div>
+          <div class='brick_interest'>
+            <div class='interest_image'></div>
+            <div class='interest_title'>健康產品</div>
+          </div>
+        </div>
+        <div class='wrapper_row'>
+          <button class='btn_complete' id='btn_complete'>完成</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</body>
