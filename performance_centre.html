@@ -1,0 +1,3306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Performance Centre</title>
+
+    <!-- SEO & Attribute -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="LinkedMarts" />
+    <meta
+      name="keywords"
+      content="The first social media shopping platform where you can earn money while shopping"
+    />
+
+    <!--Original-css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <!--Bootstrap-css-->
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap/css/4.1.3-bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/bootstrap/css/3.3.7-bootstrap.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <!--Add-for-tooltip-->
+    <script src="assets/ajax/2.1.1-jquery.min.js"></script>
+    <script src="assets/bootstrap/js/3.3.7-bootstrap.min.js"></script>
+
+    <!--line-chart-->
+    <script src="./assets/chartjs/chart.min.js"></script>
+    <script src="./assets/chartjs/analytics.js"></script>
+    <script src="./assets/chartjs/utils.js"></script>
+
+    <!--logo-->
+    <link
+      rel="icon"
+      href="assets/img/LM_site/linkedmarts-logo-ico.png"
+      type="image/icon type"
+    />
+
+    <!--Facebook-post-standard-->
+    <meta property="og:url" content="https://url" />
+    <!--hv-to-change-to-utm-version-->
+    <meta property="og:type" content="LinkedMarts.page" />
+    <meta property="og:title" content="Page Name | LinkedMarts" />
+    <meta
+      property="og:image"
+      content="../assets/img/LM_site/LinkedMarts-logo.png"
+    />
+  </head>
+  <body>
+    <!--top-nav-bar-->
+    <section class="col-12 top-nav-bar">
+      <div class="container">
+        <div class="row">
+          <!--language-currency-region-setting-->
+          <div class="col-4">
+            <ul>
+              <li class="m-w20">
+                <button
+                  class="white lcr-setting-btn"
+                  type="button"
+                  data-toggle="modal"
+                  data-target=".lcr-setting-box"
+                >
+                  <span
+                    class="flag-i"
+                    style="
+                      background: url('assets/img/LM_site/hk-flag.png')
+                        no-repeat center center;
+                    "
+                  >
+                  </span>
+                  <span class="language">
+                    English
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!--menu-bar-->
+          <div class="col-8 right">
+            <ul>
+              <li class="m-w20">
+                <h5 class="white lm-user">
+                  <button type="button" id="setting-btn">
+                    <span>
+                      Welcome Sarabeth
+                      <img
+                        class="down-arrow"
+                        src="assets/img/LM_site/down-arrow.png"
+                      />
+                    </span>
+                    <span
+                      class="lm-menu-user-i"
+                      style="
+                        background: url('assets/img/LM_site/menu-icon-01.png')
+                          no-repeat center center;
+                      "
+                    >
+                    </span>
+                  </button>
+                </h5>
+
+                <div
+                  id="setting-box"
+                  class="dp-n container-fluid setting-box-outline left white-bg"
+                >
+                  <div class="row">
+                    <div class="col-12 e-blue-box-bar p-w30">
+                      <h5>Account</h5>
+                    </div>
+
+                    <div class="col-12 p-n grey-70">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-12">
+                            <ul>
+                              <li class="cat-li">
+                                <div
+                                  class="lm-menu-box-user-i m-t-10"
+                                  style="
+                                    background: url('assets/img/LM_site/default-user-icon.png')
+                                      no-repeat center center;
+                                  "
+                                ></div>
+                                <div class="display-inline-b">
+                                  <h5 class="black m-b-5">oscar_yip</h5>
+                                  <a
+                                    href="user-profile.html"
+                                    class="pri-blue-important"
+                                  >
+                                    <h6 class="m-t-5">See my profile</h6>
+                                  </a>
+                                </div>
+                              </li>
+                              <li class="cat-li">
+                                <h5>
+                                  <button>
+                                    <a href="orders.html" class="non-a-text"
+                                      >My Orders</a
+                                    >
+                                  </button>
+                                </h5>
+                              </li>
+                              <li class="cat-li">
+                                <h5 class="m-h40">
+                                  <button>
+                                    <a href="cart.html" class="non-a-text"
+                                      >Cart
+                                      <span class="shop-cart-noti">1</span>
+                                    </a>
+                                  </button>
+                                </h5>
+                              </li>
+                              <li class="cat-li">
+                                <h5 class="m-h40">
+                                  <button>
+                                    <a href="wishlist.html" class="non-a-text"
+                                      >Wishlist</a
+                                    >
+                                  </button>
+                                </h5>
+                              </li>
+                              <li class="cat-li">
+                                <h5 class="m-h40">
+                                  <button>
+                                    <a
+                                      href="performance-centre.html"
+                                      class="non-a-text"
+                                      >Performance Centre</a
+                                    >
+                                  </button>
+                                </h5>
+                              </li>
+                              <li class="cat-li">
+                                <h5 class="m-h40">
+                                  <button>
+                                    <a
+                                      href="cheers-coin.html"
+                                      class="non-a-text"
+                                      >Cheers Coin</a
+                                    >
+                                  </button>
+                                </h5>
+                              </li>
+                              <li class="cat-li">
+                                <h5 class="m-h40">
+                                  <button>
+                                    <a
+                                      href="saved-posts.html"
+                                      class="non-a-text"
+                                      >Saved Posts</a
+                                    >
+                                  </button>
+                                </h5>
+                              </li>
+                              <li class="cat-li">
+                                <h5 class="m-h40">
+                                  <button
+                                    type="button"
+                                    class=""
+                                    data-toggle="modal"
+                                    data-target=".user-setting-box"
+                                  >
+                                    Setting
+                                  </button>
+                                </h5>
+                              </li>
+
+                              <li class="cat-li">
+                                <h5 class="m-h40">
+                                  <button
+                                    type="button"
+                                    class=""
+                                    data-toggle="modal"
+                                    data-target=".refer-friends-box"
+                                  >
+                                    Refer Friends
+                                  </button>
+                                </h5>
+                              </li>
+                              <li class="cat-li">
+                                <h5 class="m-h40">
+                                  <button>Log out</button>
+                                </h5>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="m-w20">
+                <a href="shop.html" class="non-a-text">
+                  <div
+                    class="lm-menu-icon-i"
+                    style="
+                      background: url('assets/img/LM_site/menu-icon-02.png')
+                        no-repeat center center;
+                    "
+                  ></div>
+                </a>
+              </li>
+
+              <li class="m-w20">
+                <a href="discover.html" class="non-a-text">
+                  <div
+                    class="lm-menu-icon-i"
+                    style="
+                      background: url('assets/img/LM_site/menu-icon-03.png')
+                        no-repeat center center;
+                    "
+                  ></div>
+                </a>
+              </li>
+
+              <li class="m-w20 r-w-line">
+                <div class="vl"></div>
+              </li>
+
+              <li class="m-w20">
+                <div
+                  id="fol-request-btn"
+                  class="lm-menu-icon-i"
+                  style="
+                    background: url('assets/img/LM_site/menu-icon-04.png')
+                      no-repeat center center;
+                  "
+                ></div>
+
+                <div
+                  id="fol-request-box"
+                  class="dp-n container-fluid fol-request-box-outline left white-bg"
+                >
+                  <div class="row">
+                    <div class="col-12 e-blue-box-bar p-w30">
+                      <h5>Link Request</h5>
+                    </div>
+
+                    <div class="col-12 p-n grey-70 noti-scroll-bar">
+                      <!--example-1-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-4 p-n">
+                            <h5 class="black">Jenny</h5>
+                            <h6 class="thin">
+                              Linked by
+                              <span class="medium pri-blue">oscar_yip</span>
+                            </h6>
+                          </div>
+                          <div class="col-3">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 link-btn noti-post"
+                                data-toggle="modal"
+                              >
+                                Accept
+                              </button>
+                            </h6>
+                          </div>
+                          <div class="col-3">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 showless-btn noti-post"
+                                data-toggle="modal"
+                              >
+                                Delete
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--example-2-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-4 p-n">
+                            <h5 class="black">Jenny</h5>
+                            <h6 class="thin">
+                              Linked by
+                              <span class="medium pri-blue">oscar_yip</span>
+                            </h6>
+                          </div>
+                          <div class="col-4 offset-2 right">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 link-btn noti-post"
+                                data-toggle="modal"
+                              >
+                                Link Back
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--example-3-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-4 p-n">
+                            <h5 class="black">Jenny</h5>
+                            <h6 class="thin">
+                              Linked by
+                              <span class="medium pri-blue">oscar_yip</span>
+                            </h6>
+                          </div>
+                          <div class="col-3">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 link-btn noti-post"
+                                data-toggle="modal"
+                              >
+                                Accept
+                              </button>
+                            </h6>
+                          </div>
+                          <div class="col-3">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 showless-btn noti-post"
+                                data-toggle="modal"
+                              >
+                                Delete
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--example-4-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-4 p-n">
+                            <h5 class="black">Jenny</h5>
+                            <h6 class="thin">
+                              Linked by
+                              <span class="medium pri-blue">oscar_yip</span>
+                            </h6>
+                          </div>
+                          <div class="col-4 offset-2 right">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 link-btn noti-post"
+                                data-toggle="modal"
+                              >
+                                Link Back
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 p-w30 center grey-70">
+                      <h5>
+                        <button>Show All</button>
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="m-w20">
+                <div
+                  class="lm-menu-icon-i"
+                  style="
+                    background: url('assets/img/LM_site/menu-icon-05.png')
+                      no-repeat center center;
+                  "
+                ></div>
+              </li>
+              <li class="m-w20">
+                <div
+                  id="noti-btn"
+                  class="lm-menu-icon-i"
+                  style="
+                    background: url('assets/img/LM_site/menu-icon-06.png')
+                      no-repeat center center;
+                  "
+                ></div>
+
+                <div
+                  id="noti-box"
+                  class="dp-n container-fluid noti-box-outline left white-bg"
+                >
+                  <div class="row">
+                    <div class="col-12 e-blue-box-bar p-w30">
+                      <h5>Notification</h5>
+                    </div>
+                    <div class="col-12 p-n grey-70 noti-scroll-bar">
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              <span class="pri-blue">oscar_yip</span>
+                              started linking you
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 link-btn noti-post img-100-p"
+                                data-toggle="modal"
+                              >
+                                Link back
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              <span class="pri-blue">oscar_yip</span>
+                              started linking you
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 linking-btn noti-post img-100-p"
+                                data-toggle="modal"
+                              >
+                                Linking
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/cheers-coin-01.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>25 cheers coin earned from influence.</h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 linking-btn noti-post img-100-p"
+                                data-toggle="modal"
+                              >
+                                Cheers Coin
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              <span class="pri-blue">Jenna</span>
+                              and 10 others lit your
+                              <span class="pri-blue">post</span>
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="noti-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              <span class="pri-blue">Jenna</span> like your
+                              <span class="pri-blue">post</span>
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="noti-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              <span class="pri-blue">Jenna</span>
+                              and 10 others comment on your
+                              <span class="pri-blue">post</span>
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="noti-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              <span class="pri-blue">Jenna</span> comments on
+                              your <span class="pri-blue">post</span>
+                            </h6>
+                            <h6 class="pri-blue">
+                              “The best product I ever bought !”
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="noti-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/grey-cheers.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              Your
+                              <span class="pri-blue">group cheers</span> for
+                              “Loreal super light ultra face cream” is
+                              successful !
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 blue-bg-wt-f-btn noti-post img-100-p"
+                                data-toggle="modal"
+                              >
+                                Go to order
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/grey-cheers.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              Your
+                              <span class="pri-blue">group cheers</span> for
+                              “Loreal super light ultra face cream” is not
+                              successful !
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 red-bg-wt-f-btn noti-post img-100-p"
+                                data-toggle="modal"
+                              >
+                                Cheers again
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/grey-cheers.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              Your group cheers for
+                              <span class="pri-blue"
+                                >Loreal super light ultra face cream</span
+                              >
+                              is pending. Ask more friends to join.
+                            </h6>
+                            <h6 class="thin">12 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 link-btn noti-post img-100-p"
+                                data-toggle="modal"
+                              >
+                                White a post
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              <span class="pri-blue">Jenna</span> tag you in a
+                              post.
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="noti-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              <span class="pri-blue">Jenna</span> tag you in a
+                              photo.
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="noti-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              <span class="pri-blue">Jenna</span> mentioned you
+                              in a comment.
+                            </h6>
+                            <h6>
+                              <span class="pri-blue">@oscarrr_yip</span>
+                              <span class="pri-blue">@mummy_yip</span>
+                              “LOL !!!!!”
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="noti-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/grey-cheers.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              Your facebook friend
+                              <span class="pri-blue">jenna_yip</span> just
+                              joined LinkedMarts !
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 blue-bg-wt-f-btn noti-post img-100-p"
+                                data-toggle="modal"
+                              >
+                                Link
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              <span class="pri-blue">Jenna</span> likes your
+                              comment.
+                            </h6>
+                            <h6>“ LOL !!!!!!! ”</h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="noti-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              <span class="pri-blue">Jenna</span> and
+                              <span class="pri-blue">10</span> others like your
+                              comment.
+                            </h6>
+                            <h6>“LOL !!!!!”</h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="noti-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/wishlist-03.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              Go check out the product in your
+                              <span class="pri-red">wishlist</span>.
+                            </h6>
+                            <h6 class="pri-blue">Sweden Absolut Vodka 500ml</h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="noti-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              Post cheers on your wall to earn cheers coin.
+                            </h6>
+                            <h6>
+                              <span class="pri-blue"
+                                >Sweden Absolut Vodka 500ml</span
+                              >
+                              <br />
+                              <span class="pri-green"
+                                >10 hours 11 mins 10 secs</span
+                              >
+                              left to post.
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 showless-btn noti-post img-100-p"
+                                data-toggle="modal"
+                              >
+                                Post your cheers
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/default-user-icon.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>
+                              Post review on your wall to earn cheers coin.
+                            </h6>
+                            <h6>
+                              <span class="pri-blue"
+                                >Sweden Absolut Vodka 500ml</span
+                              >
+                              <br />
+                              <span class="pri-green"
+                                >10 hours 11 mins 10 secs</span
+                              >
+                              left to post.
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 showless-btn noti-post img-100-p"
+                                data-toggle="modal"
+                              >
+                                Post your review
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/grey-cheers.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>Confirm that you recevied your product.</h6>
+                            <h6>
+                              <span class="pri-blue"
+                                >Sweden Absolut Vodka 500ml</span
+                              >
+                              <br />
+                              <span class="pri-green"
+                                >10 hours 11 mins 10 secs</span
+                              >
+                              left to post.
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 blue-bg-wt-f-btn noti-post img-100-p"
+                                data-toggle="modal"
+                              >
+                                Go to order
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-2">
+                            <div
+                              class="noti-i"
+                              style="
+                                background: url('assets/img/LM_site/grey-cheers.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-6 p-n">
+                            <h6>Your product</h6>
+                            <h6>
+                              <span class="pri-blue"
+                                >Sweden Absolut Vodka 500ml</span
+                              >
+                              <br />
+                              <span class="pri-green"
+                                >10 hours 11 mins 10 secs</span
+                              >
+                              left to post.
+                            </h6>
+                            <h6 class="thin">1 min ago</h6>
+                          </div>
+                          <div class="col-4">
+                            <h6>
+                              <button
+                                type="button"
+                                class="p-h4-w30 blue-bg-wt-f-btn noti-post img-100-p"
+                                data-toggle="modal"
+                              >
+                                Go to order
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 p-w30 center grey-70">
+                      <h5>
+                        <button>Show All</button>
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="m-w20">
+                <div
+                  id="wishlist-btn"
+                  class="lm-menu-icon-i"
+                  style="
+                    background: url('assets/img/LM_site/menu-icon-07.png')
+                      no-repeat center center;
+                  "
+                ></div>
+
+                <div
+                  id="wishlist-box"
+                  class="dp-n container-fluid wishlist-box-outline left white-bg"
+                >
+                  <div class="row">
+                    <div class="col-7 e-blue-box-bar bd-r-t-r-n p-w30">
+                      <h5>Wishlist</h5>
+                    </div>
+
+                    <ul
+                      id="wishlist-set-ul"
+                      class="col-5 e-blue-box-bar bd-r-t-l-n p-w30 grey-70"
+                    >
+                      <li id="wishlist-set-res-1" class="m-w20 res-active">
+                        <h6>
+                          <button>Public</button>
+                        </h6>
+                      </li>
+                      <li id="wishlist-set-res-2" class="m-w20">
+                        <h6>
+                          <button>Private</button>
+                        </h6>
+                      </li>
+                    </ul>
+
+                    <div
+                      id="wishlist-set-msg-1"
+                      class="col-12 p-n grey-70 noti-scroll-bar wishlist-set-content"
+                    >
+                      <!--example-1-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-5">
+                            <div
+                              class="wishlist-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-7 m-h20">
+                            <h6 class="m-t-n pri-blue one-line-h">
+                              Loreal Paris Loreal Paris Loreal Paris Loreal
+                              Paris Loreal Paris
+                            </h6>
+                            <h6 class="pri-blue one-line-h">
+                              The Super Girly Face Cream The Super Girly Face
+                              CreamThe Super Girly Face Cream
+                            </h6>
+                            <h5 class="pri-red">HK$ 3900</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--example-2-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-5">
+                            <div
+                              class="wishlist-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-7 m-h20">
+                            <h6 class="m-t-n pri-blue one-line-h">
+                              Loreal Paris Loreal Paris Loreal Paris Loreal
+                              Paris Loreal Paris
+                            </h6>
+                            <h6 class="pri-blue one-line-h">
+                              The Super Girly Face Cream The Super Girly Face
+                              CreamThe Super Girly Face Cream
+                            </h6>
+                            <h5 class="pri-red">HK$ 3900</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--example-3-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-5">
+                            <div
+                              class="wishlist-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-7 m-h20">
+                            <h6 class="m-t-n pri-blue one-line-h">
+                              Loreal Paris Loreal Paris Loreal Paris Loreal
+                              Paris Loreal Paris
+                            </h6>
+                            <h6 class="pri-blue one-line-h">
+                              The Super Girly Face Cream The Super Girly Face
+                              CreamThe Super Girly Face Cream
+                            </h6>
+                            <h5 class="pri-red">
+                              HK$ 3900
+                              <span class="d-grey h6-content m-l-5 strike"
+                                >$3510</span
+                              >
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--example-4-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-5">
+                            <div
+                              class="wishlist-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-7 m-h20">
+                            <h6 class="m-t-n pri-blue one-line-h">
+                              Loreal Paris Loreal Paris Loreal Paris Loreal
+                              Paris Loreal Paris
+                            </h6>
+                            <h6 class="pri-blue one-line-h">
+                              The Super Girly Face Cream The Super Girly Face
+                              CreamThe Super Girly Face Cream
+                            </h6>
+                            <h5 class="pri-red">HK$ 3900</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      id="wishlist-set-msg-2"
+                      class="col-12 p-n grey-70 noti-scroll-bar wishlist-set-content dp-n"
+                    >
+                      <!--example-1-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-5">
+                            <div
+                              class="wishlist-box-img"
+                              style="
+                                background: url('assets/img/LM_site/shop-product-default.jpg')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-7 m-h20">
+                            <h6 class="m-t-n pri-blue one-line-h">
+                              Loreal Paris Loreal Paris Loreal Paris Loreal
+                              Paris Loreal Paris
+                            </h6>
+                            <h6 class="pri-blue one-line-h">
+                              The Super Girly Face Cream The Super Girly Face
+                              CreamThe Super Girly Face Cream
+                            </h6>
+                            <h5 class="pri-red">HK$ 3900</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--example-2-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-5">
+                            <div
+                              class="wishlist-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-7 m-h20">
+                            <h6 class="m-t-n pri-blue one-line-h">
+                              Loreal Paris Loreal Paris Loreal Paris Loreal
+                              Paris Loreal Paris
+                            </h6>
+                            <h6 class="pri-blue one-line-h">
+                              The Super Girly Face Cream The Super Girly Face
+                              CreamThe Super Girly Face Cream
+                            </h6>
+                            <h5 class="pri-red">HK$ 3900</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--example-3-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-5">
+                            <div
+                              class="wishlist-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-7 m-h20">
+                            <h6 class="m-t-n pri-blue one-line-h">
+                              Loreal Paris Loreal Paris Loreal Paris Loreal
+                              Paris Loreal Paris
+                            </h6>
+                            <h6 class="pri-blue one-line-h">
+                              The Super Girly Face Cream The Super Girly Face
+                              CreamThe Super Girly Face Cream
+                            </h6>
+                            <h5 class="pri-red">
+                              HK$ 3900
+                              <span class="d-grey h6-content m-l-5 strike"
+                                >$3510</span
+                              >
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--example-4-->
+                      <div class="container-fluid bd-e-blue-bt">
+                        <div class="row">
+                          <div class="col-5">
+                            <div
+                              class="wishlist-box-img"
+                              style="
+                                background: url('assets/img/LM_site/default-image.png')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </div>
+                          <div class="col-7 m-h20">
+                            <h6 class="m-t-n pri-blue one-line-h">
+                              Loreal Paris Loreal Paris Loreal Paris Loreal
+                              Paris Loreal Paris
+                            </h6>
+                            <h6 class="pri-blue one-line-h">
+                              The Super Girly Face Cream The Super Girly Face
+                              CreamThe Super Girly Face Cream
+                            </h6>
+                            <h5 class="pri-red">HK$ 3900</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 p-w30 center grey-70">
+                      <h5>
+                        <button>
+                          <a href="wishlist.html" class="non-a-text"
+                            >Show All</a
+                          >
+                        </button>
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <!--tip-->
+          <div class="col-9 offset-3 m-t-30">
+            <div class="container-fluid tip center">
+              <ul>
+                <li><h6 class="thin">What's trending today:</h6></li>
+                <li class="pri-blue">
+                  <h6>
+                    <button><a href="product.html">Nike</a></button>
+                  </h6>
+                </li>
+                <li class="pri-blue">
+                  <h6>
+                    <button><a href="product.html">box2</a></button>
+                  </h6>
+                </li>
+                <li class="pri-blue">
+                  <h6>
+                    <button><a href="product.html">IPHONE 10</a></button>
+                  </h6>
+                </li>
+                <li class="pri-blue">
+                  <h6>
+                    <button><a href="product.html">bikini</a></button>
+                  </h6>
+                </li>
+                <li class="pri-blue">
+                  <h6>
+                    <button><a href="product.html">Panfarid</a></button>
+                  </h6>
+                </li>
+                <li class="pri-blue">
+                  <h6>
+                    <button><a href="product.html">farrire</a></button>
+                  </h6>
+                </li>
+                <li class="pri-blue">
+                  <h6>
+                    <button><a href="product.html">KIKO</a></button>
+                  </h6>
+                </li>
+                <li class="pri-blue">
+                  <h6>
+                    <button><a href="product.html">LIPSTICK</a></button>
+                  </h6>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--Social-media-page-button-->
+          <div class="linkedmarts-logo col-3 center">
+            <a href="social-media.html">
+              <img src="assets/img/LM_site/linkedmarts-logo.png" />
+            </a>
+          </div>
+
+          <!--search-bar-->
+          <div class="col-9">
+            <div class="container-fluid search-bar">
+              <div class="row">
+                <!--search-area-->
+                <div class="col-6 p-r-n">
+                  <input
+                    id="search"
+                    type="search"
+                    name="q"
+                    data-minchars="3"
+                    title="Search"
+                    aria-label="Search"
+                    autocapitalize="off"
+                    autocomplete="off"
+                    spellcheck="false"
+                    maxlength="200"
+                    placeholder=""
+                  />
+                  <div id="results">
+                    <ul class="p-w40">
+                      <!--recently searched-->
+                      <li class="cat-li h6-content pri-blue medium m-t-30">
+                        RECENTLY SEARCHED
+                      </li>
+                      <li class="cat-li h6-content p-l-20"><a>Hollister</a></li>
+
+                      <!--category-->
+                      <li class="cat-li h6-content pri-blue medium m-n">
+                        CATEGORY
+                      </li>
+                      <li class="cat-li h6-content p-l-20">
+                        <a href="#"
+                          >Food &amp; Beverages &gt; Alcoholic Drinks &gt;
+                          <span class="h6-header">Vodka</span>
+                        </a>
+                      </li>
+
+                      <!--user-->
+                      <li class="cat-li h6-content pri-blue medium m-n">
+                        USER
+                      </li>
+                      <li>
+                        <div class="container-fluid">
+                          <ul class="row">
+                            <li class="col-6 cat-li h6-content p-n">
+                              <a href="product.html">
+                                <div
+                                  class="result-u-img"
+                                  style="
+                                    background: url('assets/img/LM_site/default-user-icon.png')
+                                      no-repeat center center;
+                                  "
+                                ></div>
+                                <div class="result-u-img-position">
+                                  <h6 class="h6-header">oscar_yip</h6>
+                                </div>
+                              </a>
+                            </li>
+
+                            <li class="col-6 cat-li h6-content p-n">
+                              <a href="product.html">
+                                <div
+                                  class="result-u-img"
+                                  style="
+                                    background: url('assets/img/LM_site/default-user-icon.png')
+                                      no-repeat center center;
+                                  "
+                                ></div>
+                                <div class="result-u-img-position">
+                                  <h6 class="h6-header">
+                                    oscar_yip________oscar_yip________
+                                  </h6>
+                                </div>
+                              </a>
+                            </li>
+
+                            <li class="col-6 cat-li h6-content p-n">
+                              <a href="product.html">
+                                <div
+                                  class="result-u-img"
+                                  style="
+                                    background: url('assets/img/LM_site/default-user-icon.png')
+                                      no-repeat center center;
+                                  "
+                                ></div>
+                                <div class="result-u-img-position">
+                                  <h6 class="h6-header">
+                                    oscar_yip________oscar_yip________
+                                  </h6>
+                                </div>
+                              </a>
+                            </li>
+
+                            <li class="col-6 cat-li h6-content p-n">
+                              <a href="product.html">
+                                <div
+                                  class="result-u-img"
+                                  style="
+                                    background: url('assets/img/LM_site/default-user-icon.png')
+                                      no-repeat center center;
+                                  "
+                                ></div>
+                                <div class="result-u-img-position">
+                                  <h6 class="h6-header">
+                                    oscar_yip________oscar_yip________
+                                  </h6>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+
+                      <!--looking for-->
+                      <li class="cat-li h6-content pri-blue medium">
+                        LOOKING FOR
+                      </li>
+
+                      <!--hashtag-->
+                      <li class="cat-li h6-content p-l-20">
+                        <a
+                          ><span class="h6-header">#Hollister</span> in Posts</a
+                        >
+                      </li>
+
+                      <li class="cat-li h6-content p-l-20">
+                        <a
+                          ><span class="h6-header">Hollister</span> in
+                          Fashion</a
+                        >
+                      </li>
+
+                      <!--products-->
+                      <li>
+                        <div class="container-fluid">
+                          <ul class="row">
+                            <li class="col-6 cat-li h6-content p-n m-t-n">
+                              <a href="product.html">
+                                <div
+                                  class="search-bar-img"
+                                  style="
+                                    background: url('assets/img/LM_site/shop-product-default.jpg')
+                                      no-repeat center center;
+                                  "
+                                ></div>
+                                <div class="result-img-position">
+                                  <h6 class="h6-header m-t-n">
+                                    HOLLISTER Glittery triangle bikini set
+                                  </h6>
+                                  <h6 class="pri-red h6-content">HKD 3900</h6>
+                                </div>
+                              </a>
+                            </li>
+
+                            <li class="col-6 cat-li h6-content p-n m-t-n">
+                              <a href="product.html">
+                                <div
+                                  class="search-bar-img"
+                                  style="
+                                    background: url('assets/img/LM_site/shop-product-default.jpg')
+                                      no-repeat center center;
+                                  "
+                                ></div>
+                                <div class="result-img-position">
+                                  <h6 class="h6-header m-t-n">
+                                    HOLLISTER Glittery triangle bikini set
+                                  </h6>
+                                  <h6 class="pri-red h6-content">HKD 3900</h6>
+                                </div>
+                              </a>
+                            </li>
+
+                            <li class="col-6 cat-li h6-content p-n m-t-n">
+                              <a href="product.html">
+                                <div
+                                  class="search-bar-img"
+                                  style="
+                                    background: url('assets/img/LM_site/shop-product-default.jpg')
+                                      no-repeat center center;
+                                  "
+                                ></div>
+                                <div class="result-img-position">
+                                  <h6 class="h6-header m-t-n">
+                                    HOLLISTER Glittery triangle bikini set
+                                  </h6>
+                                  <h6 class="pri-red h6-content">HKD 3900</h6>
+                                </div>
+                              </a>
+                            </li>
+
+                            <li class="col-6 cat-li h6-content p-n m-t-n">
+                              <a href="product.html">
+                                <div
+                                  class="search-bar-img"
+                                  style="
+                                    background: url('assets/img/LM_site/shop-product-default.jpg')
+                                      no-repeat center center;
+                                  "
+                                ></div>
+                                <div class="result-img-position">
+                                  <h6 class="h6-header m-t-n">
+                                    HOLLISTER Glittery triangle bikini set
+                                  </h6>
+                                  <h6 class="pri-red h6-content">HKD 3900</h6>
+                                </div>
+                              </a>
+                            </li>
+
+                            <li class="col-6 cat-li h6-content p-n m-t-n">
+                              <a href="product.html">
+                                <div
+                                  class="search-bar-img"
+                                  style="
+                                    background: url('assets/img/LM_site/shop-product-default.jpg')
+                                      no-repeat center center;
+                                  "
+                                ></div>
+                                <div class="result-img-position">
+                                  <h6 class="h6-header m-t-n">
+                                    HOLLISTER Glittery triangle bikini set
+                                  </h6>
+                                  <h6 class="pri-red h6-content">HKD 3900</h6>
+                                </div>
+                              </a>
+                            </li>
+
+                            <li class="col-6 cat-li h6-content p-n m-t-n">
+                              <a href="product.html">
+                                <div
+                                  class="search-bar-img"
+                                  style="
+                                    background: url('assets/img/LM_site/shop-product-default.jpg')
+                                      no-repeat center center;
+                                  "
+                                ></div>
+                                <div class="result-img-position">
+                                  <h6 class="h6-header m-t-n">
+                                    HOLLISTER Glittery triangle bikini set
+                                  </h6>
+                                  <h6 class="pri-red h6-content">HKD 3900</h6>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+
+                      <!--suggestion-->
+                      <li class="cat-li h6-content pri-blue medium">
+                        SUGGESTION
+                      </li>
+                      <li class="cat-li h6-content p-l-20">
+                        <a><span class="h6-header">Hollister</span> Summer</a>
+                      </li>
+                      <li class="cat-li h6-content p-l-20">
+                        <a><span class="h6-header">Hollister</span> Winter</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!--promotion-brand-->
+                <div class="col-5">
+                  <ul class="right">
+                    <li class="grey-70">
+                      <h6 class="m-n">
+                        <button class="tag">
+                          <a class="non-a-text" href="searching-results.html"
+                            >Beats</a
+                          >
+                        </button>
+                      </h6>
+                    </li>
+                    <li class="grey-70">
+                      <h6 class="m-n">
+                        <button class="tag">
+                          <a class="non-a-text" href="searching-results.html"
+                            >Nike</a
+                          >
+                        </button>
+                      </h6>
+                    </li>
+                    <li class="grey-70">
+                      <h6 class="m-n">
+                        <button class="tag">
+                          <a class="non-a-text" href="searching-results.html"
+                            >Adidas</a
+                          >
+                        </button>
+                      </h6>
+                    </li>
+                  </ul>
+                </div>
+
+                <!--search-button-->
+                <button
+                  class="col-1 telescope"
+                  data-toggle="modal"
+                  data-target=".login-box"
+                >
+                  <img
+                    src="assets/img/LM_site/search-bar-telescope.png"
+                    alt="telescope"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Category-button-->
+      <div class="m-b-30">
+        <ul class="category-ul m-t-30 bd-bt-d">
+          <li class="category">
+            <a href="category.html">
+              <h5 class="cat_name">WOMEN'S FASHION</h5>
+              <div class="category-border" id="c-b-1"></div>
+            </a>
+            <div class="right-sliding">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">BATH & BODY</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Facial Cream</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lipsticks</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Happynails</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face Mask</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Ohmybaby</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Crazy Hair</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">SKIN CARE</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Facial Cream</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lipsticks</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Happynails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">COSMETICS</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lips</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Nails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">PERFUME</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lips</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Nails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">FEATURED BRANDS</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lips</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Nails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2 category-img">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">WEEKLY TRENDING</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <button>
+                          <img
+                            src="assets/img/LM_site/shop-product-default.jpg"
+                          />
+                        </button>
+                        <h6><a href="#">Da Vinche Handbag</a></h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <button>
+                          <img
+                            src="assets/img/LM_site/shop-product-default.jpg"
+                          />
+                        </button>
+                        <h6><a href="#">Adidas</a></h6>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="category">
+            <a href="category.html">
+              <h5 class="cat_name">FOOD & BEVERAGES</h5>
+              <div class="category-border" id="c-b-2"></div>
+            </a>
+            <div class="right-sliding">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">BATH & BODY</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Facial Cream</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lipsticks</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Happynails</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face Mask</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Ohmybaby</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Crazy Hair</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">SKIN CARE</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Facial Cream</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lipsticks</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Happynails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">COSMETICS</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lips</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Nails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">PERFUME</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lips</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Nails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">FEATURED BRANDS</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lips</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Nails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2 category-img">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">WEEKLY TRENDING</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <button>
+                          <img
+                            src="assets/img/LM_site/shop-product-default.jpg"
+                          />
+                        </button>
+                        <h6><a href="#">Da Vinche Handbag</a></h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <button>
+                          <img
+                            src="assets/img/LM_site/shop-product-default.jpg"
+                          />
+                        </button>
+                        <h6><a href="#">Adidas</a></h6>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="category">
+            <a href="category.html">
+              <h5 class="cat_name">BEAUTY & PERSONAL CARE</h5>
+              <div class="category-border" id="c-b-3"></div>
+            </a>
+            <div class="right-sliding">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">BATH & BODY</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Facial Cream</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lipsticks</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Happynails</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face Mask</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Ohmybaby</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Crazy Hair</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">SKIN CARE</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Facial Cream</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lipsticks</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Happynails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">COSMETICS</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lips</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Nails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">PERFUME</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lips</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Nails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">FEATURED BRANDS</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Face</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Lips</a>
+                        </h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <h6>
+                          <a href="#">Nails</a>
+                        </h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2 category-img">
+                    <ul>
+                      <li class="cat-li m-t-30">
+                        <h5>
+                          <a href="#">WEEKLY TRENDING</a>
+                        </h5>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <button>
+                          <img
+                            src="assets/img/LM_site/shop-product-default.jpg"
+                          />
+                        </button>
+                        <h6><a href="#">Da Vinche Handbag</a></h6>
+                      </li>
+                      <li class="cat-li m-h40">
+                        <button>
+                          <img
+                            src="assets/img/LM_site/shop-product-default.jpg"
+                          />
+                        </button>
+                        <h6><a href="#">Adidas</a></h6>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="category">
+            <a href="category.html">
+              <h5 class="cat_name">BABY & KIDS</h5>
+              <div class="category-border" id="c-b-4"></div>
+            </a>
+            <div class="right-sliding">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <ul>
+                      <li class="cat-li m-h60 center">
+                        <img
+                          class="coming-soon"
+                          src="assets/img/LM_site/coming-soon.png"
+                        />
+                        <h1>
+                          <a href="#">COMING SOON</a>
+                        </h1>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 page-title center">
+            <h1>Performance centre</h1>
+          </div>
+
+          <div class="col-12 center" data-gr-c-s-loaded="true">
+            <!--line-chart-->
+            <div>
+              <div class="chartjs-size-monitor">
+                <div class="chartjs-size-monitor-expand">
+                  <div class=""></div>
+                </div>
+                <div class="chartjs-size-monitor-shrink">
+                  <div class=""></div>
+                </div>
+              </div>
+              <canvas
+                id="canvas"
+                width="700"
+                height="250"
+                class="chartjs-render-monitor"
+              ></canvas>
+            </div>
+            <!--functional-button-->
+            <!--<button id="randomizeData">Randomize Data</button>-->
+            <!--<button id="addDataset">Add Dataset</button>-->
+            <!--<button id="removeDataset">Remove Dataset</button>-->
+            <!--<button id="addData">Add Data</button>-->
+            <!--<button id="removeData">Remove Data</button>-->
+          </div>
+
+          <!--cheers-coin-available-->
+          <div class="col-3 offset-2">
+            <div class="center bd-1 grey-70 bd-r-10 m-t-30">
+              <h5 class="thin">Cheers Coin available</h5>
+              <div>
+                <h1 class="pri-blue thin">
+                  <img
+                    class="img-25"
+                    src="assets/img/LM_site/cheers-coin-04.png"
+                  />
+                  72
+                </h1>
+              </div>
+            </div>
+          </div>
+
+          <!--cheers-coin-processing-->
+          <div class="col-3 offset-2">
+            <div class="center bd-1 grey-70 bd-r-10 m-t-30">
+              <h5 class="thin">Cheers Coin processing</h5>
+              <div>
+                <h1 class="pri-blue thin">
+                  <img
+                    class="img-25"
+                    src="assets/img/LM_site/cheers-coin-04.png"
+                  />
+                  72
+                </h1>
+              </div>
+            </div>
+          </div>
+
+          <!--influences-in-last-7-days-->
+          <div class="col-3 offset-2">
+            <div class="center bd-1 grey-70 bd-r-10 m-t-30">
+              <h5 class="thin">New influences in the last 7 days</h5>
+              <div>
+                <h1 class="pri-blue thin">
+                  72
+                </h1>
+              </div>
+            </div>
+          </div>
+
+          <!--total-influences-->
+          <div class="col-3 offset-2">
+            <div class="center bd-1 grey-70 bd-r-10 m-t-30">
+              <h5 class="thin">Total influences</h5>
+              <div>
+                <h1 class="pri-blue thin">
+                  72
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <h6 class="h6-header">About LinkedMarts</h6>
+            <h6><a href="about-us.html" class="non-a-text">About Us</a></h6>
+            <h6>Our Team</h6>
+            <h6>
+              <a href="pickup-points-location.html" class="non-a-text"
+                >Pickup Points Location</a
+              >
+            </h6>
+          </div>
+          <div class="col-3">
+            <h6 class="h6-header">My LinkedMarts</h6>
+            <h6>My Profile</h6>
+            <h6>My Orders</h6>
+          </div>
+          <div class="col-3">
+            <h6 class="h6-header">Work With Us</h6>
+            <h6>Job Opportunities</h6>
+            <h6>
+              <a href="landing.html" class="non-a-text">Become A Vendor</a>
+            </h6>
+            <h6>Register As Pickup Point</h6>
+            <h6>Investor Relations</h6>
+          </div>
+          <div class="col-3">
+            <h6 class="h6-header">Customer Service</h6>
+            <h6><a href="FAQ.html" class="non-a-text">FAQ</a></h6>
+            <h6>Shipping Policies</h6>
+            <h6>Billing Policies</h6>
+            <h6>Group Buy</h6>
+            <h6>Rebates</h6>
+            <h6>Return & Refund</h6>
+            <h6><a href="contact-us.html" class="non-a-text">Contact Us</a></h6>
+          </div>
+
+          <div class="col-3">
+            <h6 class="h6-header">Official Channels</h6>
+            <h6>
+              <a
+                class="non-a-text"
+                href="https://www.facebook.com/linkedmarts/?__tn__=%2Cd%2CP-R&eid=ARAPK7Fs30vLNAvBT54rCvT7reOt8eqObBuzeniNhRGUC0lT1GfIcQEGIhC0zEUi8_eWCTCR00eCHh66"
+              >
+                <img
+                  class="footer-oc"
+                  src="assets/img/LM_site/official-channels-01.png"
+                />Facebook</a
+              >
+            </h6>
+            <h6>
+              <a
+                class="non-a-text"
+                href="https://www.instagram.com/linkedmarts/?hl=en"
+              >
+                <img
+                  src="assets/img/LM_site/official-channels-02.png"
+                  class="footer-oc"
+                />Instagram</a
+              >
+            </h6>
+            <h6>
+              <a
+                class="non-a-text"
+                href="https://www.linkedin.com/company/linkedmarts"
+              >
+                <img
+                  src="assets/img/LM_site/official-channels-03.png"
+                  class="footer-oc"
+                />LinkedIn</a
+              >
+            </h6>
+          </div>
+
+          <div class="col-2">
+            <h6 class="h6-header">Payment Methods</h6>
+            <div class="row">
+              <div class="col-4">
+                <img
+                  class="footer-pm"
+                  src="assets/img/LM_site/payment-methods-01.png"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="footer-pm"
+                  src="assets/img/LM_site/payment-methods-02.png"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="footer-pm"
+                  src="assets/img/LM_site/payment-methods-03.png"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="footer-pm"
+                  src="assets/img/LM_site/payment-methods-04.png"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="footer-pm"
+                  src="assets/img/LM_site/payment-methods-05.png"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="footer-pm"
+                  src="assets/img/LM_site/payment-methods-06.png"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <h6 class="thin grey-70">
+              &copy; 2018-2020 LinkedMarts Ltd. All rights reserved.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--overlay-->
+    <div class="cat-overlay"></div>
+
+    <!-- lcr-setting-box -->
+    <div
+      class="modal fade lcr-setting-box"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="LcrSettingBox"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bd-n">
+            <h4 class="modal-title pri-blue">Shopping Environment</h4>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <!--language-->
+                <div class="col-12 m-b-15">
+                  <h5 class="bold">Choose your language:</h5>
+                  <ul>
+                    <li class="m-r-10">
+                      <button>中文（繁體）</button>
+                    </li>
+                    <li class="m-r-10">
+                      <button>English</button>
+                    </li>
+                  </ul>
+                </div>
+
+                <!--currency-->
+                <div class="col-12 m-b-15">
+                  <h5 class="bold">Choose your currency:</h5>
+                  <h5>
+                    <span
+                      class="flag-i"
+                      style="
+                        background: url('assets/img/LM_site/hk-flag.png')
+                          no-repeat center center;
+                      "
+                    >
+                    </span
+                    >HK$
+                  </h5>
+                </div>
+
+                <!--region-->
+                <div class="col-12 m-b-15">
+                  <h5 class="bold">Ship to:</h5>
+                  <h5>Hong Kong</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer bd-n">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6 left">
+                  <h6 class="m-n">
+                    <button
+                      type="button"
+                      class="previous-btn"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </h6>
+                </div>
+
+                <div class="col-6">
+                  <h6 class="m-n">
+                    <button
+                      type="button"
+                      class="sm-post-btn"
+                      data-dismiss="modal"
+                    >
+                      Save
+                    </button>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 d-grey-bg">
+                <h6 class="p-w20">
+                  Language: <span>English</span> | Currency: <span>HK$</span> |
+                  Ship to: <span>Hong Kong</span>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- user-setting-box -->
+    <div
+      class="modal fade user-setting-box"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="UserSettingBox"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <!--<div class="modal-header bd-n m-w-auto">-->
+          <!--<h4 class="modal-title black">Edit user profile</h4>-->
+          <!--</div>-->
+
+          <div class="modal-body container-fluid">
+            <div class="row">
+              <div class="col-4 bd-r-d center">
+                <ul class="d-grey user-setting-ul">
+                  <li id="user-setting-res-1" class="cat-li res-active-color">
+                    <h4 class="m-h60">
+                      <button>Edit Profile</button>
+                    </h4>
+                  </li>
+                  <li id="user-setting-res-2" class="cat-li">
+                    <h4 class="m-h60">
+                      <button>Privacy</button>
+                    </h4>
+                  </li>
+                  <li id="user-setting-res-3" class="cat-li">
+                    <h4 class="m-h60">
+                      <button>Change Password</button>
+                    </h4>
+                  </li>
+                  <li id="user-setting-res-4" class="cat-li">
+                    <h4 class="m-h60">
+                      <button>Email & SMS</button>
+                    </h4>
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                id="user-setting-msg-1"
+                class="col-8 user-setting-content m-h40"
+              >
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-8 offset-4 center">
+                      <div
+                        class="user-setting-i"
+                        style="
+                          background: url('assets/img/LM_site/default-user-icon.png')
+                            no-repeat center center;
+                        "
+                      ></div>
+                    </div>
+
+                    <div class="col-8 offset-4 center">
+                      <input type="file" />
+                    </div>
+
+                    <div class="col-4 p-n right m-h30">
+                      <h5>Username</h5>
+                    </div>
+                    <div class="col-8 m-h30">
+                      <input type="text" class="form-control" />
+                    </div>
+
+                    <div class="col-4 p-n right m-h30">
+                      <h5>First Name</h5>
+                    </div>
+                    <div class="col-8 m-h30">
+                      <input type="text" class="form-control" />
+                    </div>
+
+                    <div class="col-4 p-n right m-h30">
+                      <h5>Last Name</h5>
+                    </div>
+                    <div class="col-8 m-h30">
+                      <input type="text" class="form-control" />
+                    </div>
+
+                    <div class="col-4 p-n right m-h30">
+                      <h5>Bio</h5>
+                    </div>
+                    <div class="col-8 m-h30">
+                      <input type="text" class="form-control" />
+                    </div>
+
+                    <div class="col-4 p-n right m-h30">
+                      <h5>Email</h5>
+                    </div>
+                    <div class="col-8 m-h30">
+                      <input type="email" class="form-control" />
+                    </div>
+
+                    <div class="col-4 p-n right m-h30">
+                      <h5>Phone</h5>
+                    </div>
+                    <div class="col-8 m-h30">
+                      <input type="number" class="form-control" />
+                    </div>
+
+                    <div class="col-4 p-n right m-h30">
+                      <h5>Preferred Pickup Point</h5>
+                    </div>
+                    <div class="col-8 m-h30">
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="user-setting-msg-2"
+                class="col-8 user-setting-content dp-n m-h40"
+              >
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 p-n m-h30">
+                      <input type="radio" />
+                      <span class="m-l-5">Private profile</span>
+                      <h6 class="d-grey m-h20">
+                        When your account is private, only the approved linkers
+                        can see your photos and videos on LinkedMarts.
+                      </h6>
+                    </div>
+
+                    <div class="col-12 m-h30">
+                      <span class="m-l-5">Blocked Profiles</span>
+                    </div>
+
+                    <!--example-1-->
+                    <div class="col-12">
+                      <ul class="m-t-10">
+                        <li class="float-r searching-r-u-post">
+                          <h5 class="m-n">
+                            <button
+                              type="button"
+                              class="p-h4-w76 unblock-btn"
+                              data-toggle="modal"
+                            >
+                              Unblock
+                            </button>
+                          </h5>
+                        </li>
+                        <li>
+                          <a href="brand.html" class="non-a-text">
+                            <div
+                              class="blocked-user-i"
+                              style="
+                                background: url('assets/img/LM_site/shop-product-default.jpg')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </a>
+                        </li>
+                        <li>
+                          <h5>
+                            <span class="m-r-10 black">
+                              <a href="brand.html" class="non-a-text"
+                                >raymond</a
+                              >
+                            </span>
+                          </h5>
+                          <h6 class="grey-70">
+                            &nbsp;
+                          </h6>
+                          <h6 class="thin">
+                            &nbsp;
+                          </h6>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!--example-2-->
+                    <div class="col-12">
+                      <ul class="m-t-10">
+                        <li class="float-r searching-r-u-post">
+                          <h5 class="m-n">
+                            <button
+                              type="button"
+                              class="p-h4-w76 unblock-btn"
+                              data-toggle="modal"
+                            >
+                              Unblock
+                            </button>
+                          </h5>
+                        </li>
+                        <li>
+                          <a href="brand.html" class="non-a-text">
+                            <div
+                              class="blocked-user-i"
+                              style="
+                                background: url('assets/img/LM_site/shop-product-default.jpg')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </a>
+                        </li>
+                        <li>
+                          <h5>
+                            <span class="m-r-10 black">
+                              <a href="brand.html" class="non-a-text">wolf</a>
+                            </span>
+                          </h5>
+                          <h6 class="grey-70">
+                            &nbsp;
+                          </h6>
+                          <h6 class="thin">
+                            &nbsp;
+                          </h6>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!--example-3-->
+                    <div class="col-12">
+                      <ul class="m-t-10">
+                        <li class="float-r searching-r-u-post">
+                          <h5 class="m-n">
+                            <button
+                              type="button"
+                              class="p-h4-w76 unblock-btn"
+                              data-toggle="modal"
+                            >
+                              Unblock
+                            </button>
+                          </h5>
+                        </li>
+                        <li>
+                          <a href="brand.html" class="non-a-text">
+                            <div
+                              class="blocked-user-i"
+                              style="
+                                background: url('assets/img/LM_site/shop-product-default.jpg')
+                                  no-repeat center center;
+                              "
+                            ></div>
+                          </a>
+                        </li>
+                        <li>
+                          <h5>
+                            <span class="m-r-10 black">
+                              <a href="brand.html" class="non-a-text"
+                                >michelle_fhn</a
+                              >
+                            </span>
+                          </h5>
+                          <h6 class="grey-70">
+                            &nbsp;
+                          </h6>
+                          <h6 class="thin">
+                            &nbsp;
+                          </h6>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-12 m-h20">
+                      <span class="m-l-5">Tagged Post</span>
+                    </div>
+
+                    <div class="col-12 m-h10">
+                      <input class="m-l-5" type="radio" name="tagged-post" />
+                      <span class="m-l-5">Add automatically</span>
+                    </div>
+
+                    <div class="col-12 m-h10">
+                      <input class="m-l-5" type="radio" name="tagged-post" />
+                      <span class="m-l-5">Add manually</span>
+                    </div>
+
+                    <div class="col-12">
+                      <h6 class="m-l-5 d-grey">
+                        Choose how you want posts which people tag you appear on
+                        your profile.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="user-setting-msg-3"
+                class="col-8 user-setting-content dp-n m-h40"
+              >
+                <div class="container-fluid">
+                  <div class="row">
+                    <!--current-password-->
+                    <div class="col-4 p-n right m-h30">
+                      <h5>Current Password</h5>
+                    </div>
+                    <div class="col-8 m-h30">
+                      <input type="password" class="form-control" />
+                    </div>
+
+                    <!--new-password-->
+                    <div class="col-4 p-n right m-h30">
+                      <h5>New Password</h5>
+                    </div>
+                    <div class="col-8 m-h30">
+                      <input type="password" class="form-control" />
+                    </div>
+
+                    <!--confirm-new-password-->
+                    <div class="col-4 p-n right m-h30">
+                      <h5>Confirm New Password</h5>
+                    </div>
+                    <div class="col-8 m-h30">
+                      <input type="password" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="user-setting-msg-4"
+                class="col-8 user-setting-content dp-n m-h40"
+              >
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 p-n m-h30">
+                      <h4 class="m-n">Emails</h4>
+                    </div>
+
+                    <div class="col-12 m-h20">
+                      <input type="radio" checked="" />
+                      <span class="m-l-5">Order emails</span>
+                      <h6 class="d-grey">
+                        Get notified about your order status.
+                      </h6>
+                    </div>
+
+                    <div class="col-12 m-h20">
+                      <input type="radio" />
+                      <span class="m-l-5">Product emails</span>
+                      <h6 class="d-grey">Get reminder for product launch.</h6>
+                    </div>
+
+                    <div class="col-12 m-h20">
+                      <input type="radio" />
+                      <span class="m-l-5">Reminders emails</span>
+                      <h6 class="d-grey">
+                        Stay up to date for the things you missed.
+                      </h6>
+                    </div>
+
+                    <div class="col-12 p-n m-h30">
+                      <h4 class="m-n">SMS (Text Message)</h4>
+                    </div>
+
+                    <div class="col-12 m-h20">
+                      <input type="radio" checked="" />
+                      <span class="m-l-5">Order pickup SMS</span>
+                      <h6 class="d-grey">
+                        Get notied when your order has arrived and ready for
+                        pickup.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer bd-n">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6 left">
+                  <h6 class="m-n">
+                    <button
+                      type="button"
+                      class="previous-btn"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </h6>
+                </div>
+
+                <div class="col-6">
+                  <h6 class="m-n">
+                    <button
+                      type="button"
+                      class="sm-post-btn"
+                      data-dismiss="modal"
+                    >
+                      Save
+                    </button>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Script-->
+    <script src="assets/js/script.js"></script>
+    <script>
+      //unchecked-radio-btn
+      var radio = function () {
+        $("input[type='radio']").click(function () {
+          var previousValue = $(this).attr("previousValue");
+          var name = $(this).attr("name");
+
+          if (previousValue == "checked") {
+            $(this).removeAttr("checked");
+            $(this).attr("previousValue", false);
+          } else {
+            $("input[name=" + name + "]:radio").attr("previousValue", false);
+            $(this).attr("previousValue", "checked");
+          }
+        });
+      };
+      radio("1");
+
+      // line-chart-script
+      var MONTHS = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      var config = {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Api", "May", "Jun", "Jul", "Aug"],
+          datasets: [
+            {
+              label: "Influential Power",
+              backgroundColor: "rgba(59, 190, 190, 0.9)",
+              borderColor: "rgba(49, 76, 159, 0.9)",
+              data: [0, 50, 80, 60, 10, 20, 45, 70, 80],
+              fill: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          legend: {
+            labels: {
+              fontSize: 16,
+              fontColor: "#706f6f",
+              fontStyle: "300",
+            },
+          },
+          title: {
+            display: true,
+            text: "",
+          },
+          tooltips: {
+            mode: "index",
+            intersect: false,
+          },
+          hover: {
+            mode: "nearest",
+            intersect: true,
+          },
+          scales: {
+            xAxes: [
+              {
+                display: true,
+                scaleLabel: {
+                  display: true,
+                  labelString: "2019",
+                  fontSize: 16,
+                  fontStyle: "300",
+                  fontColor: "#706f6f",
+                },
+                ticks: {
+                  fontSize: 16,
+                  fontStyle: "300",
+                  fontColor: "#706f6f",
+                },
+                gridLines: {
+                  display: false,
+                },
+              },
+            ],
+            yAxes: [
+              {
+                display: true,
+                scaleLabel: {
+                  display: true,
+                  labelString: "",
+                },
+                ticks: {
+                  fontSize: 14,
+                  fontStyle: "300",
+                  fontColor: "#706f6f",
+                  min: 0,
+                  max: 100,
+                  stepSize: 20,
+                },
+              },
+            ],
+          },
+        },
+      };
+
+      window.onload = function () {
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myLine = new Chart(ctx, config);
+      };
+
+      // line-chart-functional-button
+
+      document
+        .getElementById("randomizeData")
+        .addEventListener("click", function () {
+          config.data.datasets.forEach(function (dataset) {
+            dataset.data = dataset.data.map(function () {
+              return randomScalingFactor();
+            });
+          });
+
+          window.myLine.update();
+        });
+
+      var colorNames = Object.keys(window.chartColors);
+      document
+        .getElementById("addDataset")
+        .addEventListener("click", function () {
+          var colorName =
+            colorNames[config.data.datasets.length % colorNames.length];
+          var newColor = window.chartColors[colorName];
+          var newDataset = {
+            label: "Dataset " + config.data.datasets.length,
+            backgroundColor: newColor,
+            borderColor: newColor,
+            data: [],
+            fill: false,
+          };
+
+          for (var index = 0; index < config.data.labels.length; ++index) {
+            newDataset.data.push(randomScalingFactor());
+          }
+
+          config.data.datasets.push(newDataset);
+          window.myLine.update();
+        });
+
+      document.getElementById("addData").addEventListener("click", function () {
+        if (config.data.datasets.length > 0) {
+          var month = MONTHS[config.data.labels.length % MONTHS.length];
+          config.data.labels.push(month);
+
+          config.data.datasets.forEach(function (dataset) {
+            dataset.data.push(randomScalingFactor());
+          });
+
+          window.myLine.update();
+        }
+      });
+
+      document
+        .getElementById("removeDataset")
+        .addEventListener("click", function () {
+          config.data.datasets.splice(0, 1);
+          window.myLine.update();
+        });
+
+      document
+        .getElementById("removeData")
+        .addEventListener("click", function () {
+          config.data.labels.splice(-1, 1); // remove the label first
+
+          config.data.datasets.forEach(function (dataset) {
+            dataset.data.pop();
+          });
+
+          window.myLine.update();
+        });
+    </script>
+  </body>
+</html>

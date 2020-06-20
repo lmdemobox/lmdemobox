@@ -1,31 +1,52 @@
 <script>
   $(document).ready(function(){
 
-
-    var path = window.location.pathname;
+    var path = window.location.href;
     var page = path.split("/").pop();
-    console.log( page );
-    if(page=='index.html'){
+    console.log(path);
+    if(page=='index.html' || !page){
       $('div.af_login').hide();
     }else{
       $('div.b4_login').hide();
     }
+    $('input#input_box').on('input',function(){
+      if($(this).val()!=''&&$(this).val()!=' '){
+        $('div.wrapper_input_autofill').addClass('active');
+      }else{
+        $('div.wrapper_input_autofill').removeClass('active');
+      }
+    });
+    $('div.wrapper_user').on('mouseenter',function(){
+      $('div.user_dropdown_meun').addClass('active');
+    });
+    $('div.user_dropdown_meun').on('mouseleave',function(){
+      $('div.user_dropdown_meun').removeClass('active');
+    });
     $('button#btn_si').on('click',function(){
       window.location.href = "./searchresult.html";
-    });
-    $('div#wrapper_userBrick').on('click',function(){
-      window.location.href = "./mix-s/wall.html";
     });
     $('div.btn_noti_this').on('mouseenter',function(){
       $('div.meun_dropdown').addClass('active');
     }).on('mouseleave',function(){
       $('div.meun_dropdown').removeClass('active');
     });
+    $('div.btn_noti_wl').on('mouseenter',function(){
+      $('div.wishlist_dropdown').addClass('active');
+    }).on('mouseleave',function(){
+      $('div.wishlist_dropdown').removeClass('active');
+    });
     $('div.switch_tap').on('click',function(){
       $('div.switch_tap').removeClass('active');
       $(this).addClass('active');
       let target=$(this).attr('id').replace('switch_tap','wrapper_notidiff_section');
       $('div.wrapper_notidiff_section').removeClass('active');
+      $('div#'+target).addClass('active');
+    });
+    $('div.wishlist_dropdown div.switch_tap').on('click',function(){
+      $('div.wishlist_dropdown div.switch_tap').removeClass('active');
+      $(this).addClass('active');
+      let target=$(this).attr('id').replace('switch_tap','wrapper_notidiff2_section');
+      $('div.wishlist_dropdown div.wrapper_notidiff2_section').removeClass('active');
       $('div#'+target).addClass('active');
     });
   });
@@ -60,17 +81,64 @@
     </div>
     <div class='wrapper_right af_login active'>
       <div class='wrapper_user wrapper_flex_vert'  id='wrapper_userBrick'>
-        <div class='user_icon' id='user_icon'></div>
-        <div class='user_name' id='user_name'>PeterParker</div>
+        <a href='./mix-s/wall.html'>
+          <div class='user_icon' id='user_icon'></div>
+          <div class='user_name' id='user_name'>PeterParker</div>
+        </a>
+        <div class='user_dropdown_meun'>
+          <div class='dropdown_row'><a href='./wishlist.html'>願望清單</a></div>
+          <div class='dropdown_row'><a href='./performance_center.html'>表現中心</a></div>
+          <div class='dropdown_row'><a href='./setting.html'>設定</a></div>
+        </div>
       </div>
       <div class='wrapper_redirect wrapper_flex_vert'>
         <a href='myorders.html' class='btn_redirect'><i class="fas fa-boxes"></i>我的訂單</a>
         <a href='./mix-s/index.html' class='btn_redirect'><i class="fas fa-home"></i>社交動態</a>
         <a href='index.html' class='btn_redirect'><i class="fas fa-shopping-bag"></i>購物主頁</a>
       </div>
+    </div>
+  </div>
+</div>
+<div id='searchBar'>
+  <div class='wrapper wrapper_flex_full'>
+    <div class='wrapper_left'>
+      <a href='./mix-s/wall.html' id='logo'><img src='image/linkedmarts-logo_w.png'/></a>
+    </div>
+    <div class='wrapper_right'>
+      <div class='wrapper_input showing'>
+        <div class='wrapper_ip wrapper_flex_full'>
+          <input id='input_box' placeholder="輸入關鍵字( 產品名稱、產品種類、品牌...... )"/>
+          <button id='btn_si'>搜尋</button>
+        </div>
+        <div class='wrapper_input_autofill'>
+          <div class='wrapper_subsection'>
+            <div class='subsection_title'>分類</div>
+            <div class='subsection_item'>今期流行 > 化妝品 > 眼妝</div>
+          </div>
+          <div class='wrapper_subsection'>
+            <div class='subsection_title'>你可能感到興趣的</div>
+            <div class='subsection_item'>眼妝 - 化妝品</div>
+            <div class='subsection_item'>眼妝 - 食品及飲料</div>
+            <div class='wrapper_subsection_itemwrapper'>
+              <div class='subsection_item_brick'>
+                <div class='o_productPic'><div class='o_pd_image' style='background-image:url("image/003.jpg")'></div></div>
+                <div class='o_productInfo'>
+                  <a href=''><span class='o_pd_brand'>沙田牌</span> - <span class='o_pd_name'>非洲天然岩鹽 250磅裝[香蕉味特別版]</span></a>
+                  <div class='o_productPrice'>440.00</div>
+                </div>
+              </div>
+              <div class='subsection_item_brick'>
+                <div class='o_productPic'><div class='o_pd_image' style='background-image:url("image/002.jpg")'></div></div>
+                <div class='o_productInfo'>
+                  <a href=''><span class='o_pd_brand'>沙田牌</span> - <span class='o_pd_name'>非洲天然岩鹽 250磅裝[香蕉味特別版]</span></a>
+                  <div class='o_productPrice'>440.00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class='wrapper_function wrapper_flex_vert'>
-        <div class='btn_noti'><i class="fas fa-flag"></i></div>
-        <div class='btn_noti'><i class="fas fa-envelope"></i></div>
         <div class='btn_noti btn_noti_this'>
           <i class="fas fa-bell"></i>
           <div class='meun_dropdown'>
@@ -202,49 +270,40 @@
             </div>
           </div>
         </div>
-        <div class='btn_noti'><i class="fas fa-user-friends"></i></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div id='searchBar'>
-  <div class='wrapper wrapper_flex_full'>
-    <div class='wrapper_left'>
-      <a href='./mix-s/wall.html' id='logo'><img src='image/linkedmarts-logo_w.png'/></a>
-    </div>
-    <div class='wrapper_right'>
-      <div class='wrapper_input showing'>
-        <div class='wrapper_ip wrapper_flex_full'>
-          <input id='input_box' placeholder="輸入關鍵字( 產品名稱、產品種類、品牌...... )"/>
-          <button id='btn_si'>搜尋</button>
-        </div>
-        <div class='wrapper_input_autofill'>
-          <div class='wrapper_subsection'>
-            <div class='subsection_title'>分類</div>
-            <div class='subsection_item'>今期流行 > 化妝品 > 眼妝</div>
-          </div>
-          <div class='wrapper_subsection'>
-            <div class='subsection_title'>你可能感到興趣的</div>
-            <div class='subsection_item'>眼妝 - 化妝品</div>
-            <div class='subsection_item'>眼妝 - 食品及飲料</div>
-            <div class='wrapper_subsection_itemwrapper'>
-              <div class='subsection_item_brick'>
-                <div class='o_productPic'><div class='o_pd_image' style='background-image:url("image/003.jpg")'></div></div>
-                <div class='o_productInfo'>
-                  <a href=''><span class='o_pd_brand'>沙田牌</span> - <span class='o_pd_name'>非洲天然岩鹽 250磅裝[香蕉味特別版]</span></a>
-                  <div class='o_productPrice'>440.00</div>
+        <div class='btn_noti'><i class="fas fa-envelope"></i></div>
+        <div class='btn_noti btn_noti_wl'>
+          <i class="fas fa-heart"></i>
+          <div class='wishlist_dropdown'>
+            <div class='subtitle'></div>
+            <div class='wrapper_row_switch_tap'>
+              <div class='switch_tap active' id='switch_tap_11'>公開</div>
+              <div class='switch_tap' id='switch_tap_12'>私人</div>
+            </div>
+            <div class='wrapper_notidiff2_section active' id='wrapper_notidiff2_section_11'>
+              <div class='wrapper_row_noti2_p_row'>
+                <div class='noti_product_info_image'><div style='background-image:url("image/003.jpg")'></div></div>
+                <div class='noti_product_content'>
+                  <div><a class='noti_product_name' href=''>銀河牌 - 天然北極冰層水250ml</a></div>
                 </div>
               </div>
-              <div class='subsection_item_brick'>
-                <div class='o_productPic'><div class='o_pd_image' style='background-image:url("image/002.jpg")'></div></div>
-                <div class='o_productInfo'>
-                  <a href=''><span class='o_pd_brand'>沙田牌</span> - <span class='o_pd_name'>非洲天然岩鹽 250磅裝[香蕉味特別版]</span></a>
-                  <div class='o_productPrice'>440.00</div>
+              <div class='wrapper_row_noti2_p_row'>
+                <div class='noti_product_info_image'><div style='background-image:url("image/001.jpg")'></div></div>
+                <div class='noti_product_content'>
+                  <div><a class='noti_product_name' href=''>東京牌 - 東京灣內海海草原油無添加劑200ml 10支裝</a></div>
+                </div>
+              </div>
+            </div>
+            <div class='wrapper_notidiff2_section' id='wrapper_notidiff2_section_12'>
+              <div class='wrapper_row_noti2_p_row'>
+                <div class='noti_product_info_image'><div style='background-image:url("image/003.jpg")'></div></div>
+                <div class='noti_product_content'>
+                  <div><a class='noti_product_name' href=''>銀河牌 - 天然北極冰層水250ml</a></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class='btn_noti'><i class="fas fa-rocket"></i></div>
       </div>
     </div>
   </div>

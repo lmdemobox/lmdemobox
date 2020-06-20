@@ -1,0 +1,85 @@
+<script>
+  $(document).ready(function(){
+    $('button.btn_oa_review').on('click',function(event){
+      window.location.href = "./review.html";
+    });
+  });
+</script>
+<div id='section_refundContent'>
+  <div class='breadcrumbs'>
+    <a gref=''>主頁</a> > <a href=''>退款安排</a>
+  </div>
+  <div class='wrapper'>
+    <div class='section_title'>
+      退款安排
+    </div>
+    <div class='section_content'>
+      <div class='des'>請告訴我們退款的原因。一旦您的退款申請獲得批准並且您的產品合乎資格，我們將全額退款。</div>
+      <div class='wrapper_productAvendorlocation'>
+        <div class='wrapper_productStat'>
+          <div class='o_productPic'><div class='o_pd_image' style='background-image:url("image/001.jpg")'></div></div>
+          <div class='o_productInfo'>
+            <a href='' class='hlink_product_bn'><span class='o_pd_brand'>太陽牌</span> - <span class='o_pd_name'>夏威夷黑糖[70周年特別版]</span></a>
+            <div class='o_productQty'>數量: 5</div>
+            <a href='' class='o_productVd'>柴米油鹽批發</a>
+          </div>
+          <div class='o_productPrice'>440.00</div>
+          <div class='o_orderStatus' style='display:none;'>
+            <div class='o_orderShippongStatus'>已送達 <i class="fas fa-clipboard-check"></i></div>
+            <a href='orderdetail.html' class='o_orderDetails'><div>訂單資料</div></a>
+          </div>
+          <div class='o_orderAction'>
+          </div>
+        </div>
+        <div class='wrapper_vendorlocation'>
+          <div class='subtitle'>供應商退款地址</div>
+          <div class='vendorlocation'>新界沙田香港科學園 19 號19W 7樓706室</div>
+          <div class='remark'>有關更多詳細信息，請查閱<a href=''>貨品退款安排</a></div>
+        </div>
+      </div>
+      <div class='wrapper_guidelines'>
+        <div class='subtitle'>退貨前請確定</div>
+        <div class='wrapper_guideline_grid'>
+          <div class='brick_guideline'>
+            <div class='numtag'>1</div>
+            <div class='des'>產品處於原始狀態，包裝和標籤</div>
+          </div>
+          <div class='brick_guideline'>
+            <div class='numtag'>2</div>
+            <div class='des'>發票隨產品附送</div>
+          </div>
+          <div class='brick_guideline'>
+            <div class='numtag'>3</div>
+            <div class='des'>提交退款申請後3天內退貨</div>
+          </div>
+        </div>
+      </div>
+      <div class='wrapper_formtofill'>
+        <form>
+          <div class='wrapper_row'>
+            <select id="logprovider" name="logprovider" class='form_rowC_half'>
+              <option value=""disabled selected>物流供應商</option>
+              <option value="hongkongpost">Hong Kong Post</option>
+              <option value="sfexpress">SF Express</option>
+              <option value="morningexpress">Morning Express</option>
+              <option value='inperson'>In Person</option>
+            </select>
+            <input class='c-inputBox form_rowC_half' id='orderno' placeholder='訂單編號'>
+          </div>
+          <div class='wrapper_row'>
+            <textarea id='refundReason' class='' placeholder='請說明原因'></textarea>
+          </div>
+          <div class='wrapper_row'>
+            <div class='upload_pic'>請上載圖片證明</div>
+          </div>
+
+          <div class='wrapper_row'>
+            <button class='btn_back btn_bottom_row' id='btn_back'>返回</button>
+            <button class='btn_submit btn_bottom_row' id='btn_submit'>提交</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--- --->
+</div>
